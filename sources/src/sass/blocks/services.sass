@@ -1,0 +1,39 @@
+.services
+   &__grid
+      grid-template-columns: repeat(3, 1fr)
+   &__item
+      min-height: 340px
+      padding: 28px 12px 12px
+      border-radius: 40px
+      background: var(--sectionBg)
+      position: relative
+      overflow: hidden
+   &__title
+      font-size: 24px
+      font-weight: 500
+   &__info
+      height: 100%
+      position: relative
+      z-index: 1
+      display: flex
+      flex-direction: column
+   &__top
+      width: 100%
+      max-width: 267px
+      margin-bottom: 20px
+      padding: 0 16px
+   &__bottom
+      margin-top: auto
+      display: flex
+      justify-content: space-between
+   &__img
+      position: absolute
+      right: 0
+      bottom: 0
+
+.section
+   &--services
+      .section
+         &__header
+            .text-dots
+               max-width: 572px

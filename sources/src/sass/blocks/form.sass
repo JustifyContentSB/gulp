@@ -1,0 +1,52 @@
+.form
+   &__inner
+      padding: 36px 36px 44px
+      border-radius: 40px
+      background: #fff
+   &__top
+      margin-bottom: 50px
+   &__title
+      margin-bottom: 12px
+   &__lead
+      width: 100%
+      max-width: 500px
+   &__main
+      margin-bottom: 12px
+   &__label
+      margin-bottom: 12px
+      display: block
+   &__field,
+   &__textarea
+      width: 100%
+      padding: 12px
+      background: var(--sectionBg)
+      border: none
+      border-radius: 8px
+      resize: none
+      font-size: 14px
+      color: var(--primary)
+      &::placeholder
+         color: var(--gray)
+   &__textarea
+      min-height: 110px
+   &__agree
+      margin-bottom: 28px
+      font-size: 14px
+      color: var(--gray)
+      input
+         display: none
+      &-label
+         display: inline-flex
+         cursor: pointer
+      &-checkbox
+         width: 16px
+         min-width: 16px
+         height: 16px
+         margin-right: 8px
+         display: inline-block
+         border-radius: 3px
+         border: 1px solid var(--gray)
+         input:checked ~ &
+            background: red
+   &__submit
+      width: 100%

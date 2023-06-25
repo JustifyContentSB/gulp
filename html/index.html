@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Main</title>
+    <title>Главная</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,19 +20,144 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container">Header</div>
-    </header>
-    <main class="main">
-      <div class="container">
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="container">Footer</div>
-    </footer>
+    <div class="wrapper">
+      <header class="header header--index">
+        <div class="header__inner container">
+          <div class="header__menu menu"><a class="btn-circle menu__burger" href="#" aria-label="открыть меню"><i class="icon icon-burger"></i></a>
+            <nav class="menu__nav">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link btn btn--light" href="#">Пациентам</a></li>
+                <li class="menu__item"><a class="menu__link btn btn--light" href="#">Обучение</a></li>
+                <li class="menu__item"><a class="menu__link btn btn--light" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="menu__manage"><a class="btn menu__manage-btn" href="#">Оставить заявку</a></div>
+          </div>
+          <section class="header__hero hero">
+            <div class="hero__inner">
+              <div class="hero__top">
+                <h1 class="hero__title"><span class="hero__title-pic">Центр коррекции зрения <img class="hero__title-logo" src="images/elements/logo.png" alt="логотип" width="95" height="88"></span><span class="hero__title-colour hero__title-right">Натальи Ринской</span></h1>
+                <p class="hero__cite">«Изменяя мир, начни с того, чтобы увидеть его чётко!»</p>
+              </div>
+              <div class="hero__bottom">
+                <p class="hero__bottom-text">Первая клиника современной оптометрии, в которой вы сможете решить безоперационно проблемы, связанные с двоением, косоглазием, амблиопией, аккомодационными нарушениями, эксцентричной фиксацией и другими бинокулярными нарушениями</p>
+                <div class="hero__bottom-content"><img class="hero__bottom-img" src="images/header/glasses.png" alt="очки" width="568" height="317"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section section--chapter">
+          <div class="section__wrapper">
+            <div class="chapter">
+              <div class="chapter__inner">
+                <div class="chapter__top">
+                  <h2 class="chapter__lead">Пожалуйста, выберите подходящий раздел:</h2>
+                </div>
+                <div class="chapter__content">
+                  <ul class="chapter__grid grid">
+                    <li class="chapter__item"><a class="chapter__link" href="#">
+                        <div class="chapter__img"><img class="chapter__img-eye" src="images/chapter/chapter-1.png" alt="" width="327" height="371"></div>
+                        <div class="chapter__text">
+                          <p>Пациентам</p>
+                        </div></a></li>
+                    <li class="chapter__item"><a class="chapter__link" href="#">
+                        <div class="chapter__img"><img src="images/chapter/chapter-2.png" alt="" width="386" height="387"></div>
+                        <div class="chapter__text">
+                          <p>Профессионалам</p>
+                        </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner container">
+          <div class="footer__top">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/elements/logo-footer.png" alt="логотип" width="178" height="55"></a></div>
+            <div class="footer__medium">
+              <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Пациентам</a></li>
+                  <li><a href="#">Профессионалам</a></li>
+                  <li><a href="#">Библиотека знаний</a></li>
+                  <li><a href="#">Форум</a></li>
+                </ul>
+              </nav>
+              <div class="footer__contacts">
+                <div class="footer__contacts-feedback"><a class="footer__contacts-tel tel" href="tel:+79670483343">+7 (967) 048 33 43</a><a class="email" href="mailto:info@rinoptica.ru">info@rinoptica.ru</a></div>
+                <div class="footer__contacts-socials socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__btn" href="#"><i class="icon icon-telegram"></i></a></li>
+                    <li class="socials__item"><a class="socials__btn" href="#"><i class="icon icon-instagram"></i></a></li>
+                    <li class="socials__item"><a class="socials__btn" href="#"><i class="icon icon-vk"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer__right">
+              <div class="footer__info">
+                <p class="footer__info-title">ООО «РИНОПТИКА»</p>
+                <p class="footer__info-company">Центр коррекции зрения Натальи Ринской</p>
+              </div>
+              <div class="footer__data data">
+                <ul class="data__list">
+                  <li class="data__item">
+                    <p class="data__title">Медицинская лицензия:</p>
+                    <div class="data__info">
+                      <p>№ Л041-01137-77/00338526</p>
+                      <p>от 16 января 2020 года</p>
+                    </div>
+                  </li>
+                  <li class="data__item">
+                    <p class="data__title">ИНН/КПП:</p>
+                    <div class="data__info"> 
+                      <p>7734434854/773401001</p>
+                    </div>
+                  </li>
+                  <li class="data__item">
+                    <p class="data__title">Р/с:</p>
+                    <div class="data__info"> 
+                      <p>40702810301990003361 </p>
+                      <p>в АО «АЛЬФА-БАНК», г. Москва</p>
+                    </div>
+                  </li>
+                  <li class="data__item">
+                    <p class="data__title">БИК:</p>
+                    <div class="data__info">
+                      <p>044525593</p>
+                    </div>
+                  </li>
+                  <li class="data__item">
+                    <p class="data__title">Корр. счет:</p>
+                    <div class="data__info"> 
+                      <p>1230845250000999 </p>
+                      <p>123308, г. Москва, </p>
+                      <p>ул. Мнёвники, д. 7, корп. 2, пом. 62</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__copy">© Центр коррекции зрения Натальи Ринской </p>
+            <ul class="footer__docs">
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Договор оферты</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

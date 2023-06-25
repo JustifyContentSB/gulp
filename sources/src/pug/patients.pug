@@ -1,0 +1,121 @@
+extends base/_layout
+block head
+   title Пациентам
+block page
+   main.main
+      section.section.section--services
+         .section__header.section__header--detailed
+            h2.section__title Услуги и цены
+            p.text-dots Мы специализируемся на подборе сложной коррекции зрения, в том числе призматической, а также на лечении косоглазия безоперационными методами. Наши услуги включают:
+         .section__wrapper
+            .services
+               .services__inner
+                  ul.services__grid.grid
+                     li.services__item
+                        .services__info
+                           .services__top
+                              h3.services__title Подбор призматической коррекции
+                           .services__bottom
+                              a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
+                              a.btn-info(href="#") #[i.icon.icon-info] Подробнее
+                        .services__img
+                           img(src="images/services/services-1.png", alt="фото" width="200" height="341")
+                     li.services__item
+                        .services__info
+                           .services__top
+                              h3.services__title Курс развития зрительных функций
+                           .services__bottom
+                              a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
+                              a.btn-info(href="#") #[i.icon.icon-info] Подробнее
+                        .services__img
+                           img(src="images/services/services-2.png", alt="фото" width="226" height="341")
+                     li.services__item
+                        .services__info
+                           .services__top
+                              h3.services__title Цветокоррекция
+                           .services__bottom
+                              a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
+                              a.btn-info(href="#") #[i.icon.icon-info] Подробнее
+                        .services__img
+                           img(src="images/services/services-3.png", alt="фото" width="225" height="341")
+
+      section.section.section--optics
+         .section__wrapper
+            .optics
+               .optics__inner
+                  ul.optics__grid.grid
+                     li.optics__item
+                        .optics__img.img-cover
+                           img(src="images/optics/optics.jpg", alt="оптика" width="690" height="493")
+                     li.optics__item
+                        .optics__info
+                           h2.optics__title.title.title--big Оптика
+                           p Помимо подбора коррекции зрения любой сложности в нашей клинике вы сможете заказать изготовление очков по выписанному рецепту.
+                           p #[b Чтобы ознакомиться с ценами нажмите на кнопку ниже]
+                           a.optics__btn.btn(href="#") Стоимость
+                              
+      section.section.section--founder
+         .section__wrapper
+            .founder
+               .section__header.visually-hidden
+                  h2.section__title О нашей клинике
+               .founder__inner
+                  .founder__grid.grid
+                     .founder__main
+                        .founder__top
+                           p.founder__lead Основатель клиники
+                           p.founder__name Наталья Вадимовна Ринская
+                        .founder__info
+                           ul.list
+                              li.list__item
+                                 p #[b Получила степень бакалавра оптометрии в Иерусалимском академическом институте Хадасса (Израиль)]
+                                 p Продолжила свое образование в Университете Лиги Плюща (на курсах повышения квалификации в Университете Пенсильвании) и Лондонском городском университете (City University of London).
+                              li.list__item
+                                 p #[b Получила степень Магистра оптометрии в Университете Кардифф (Великобритания)]
+                                 p И степень Магистра педагогики и психологии (Московский педагогический государственный университет).
+                              li.list__item
+                                 p #[b Прошла профессиональную переподготовку]
+                                 p По программе Медицинская оптика в области оптометрии. (Государственном автономном профессиональном образовательном учреждении «Колледж предпринимательства №11» г. Москва). 
+                              li.list__item
+                                 p #[b Наталья — постоянный слушатель и приглашенный лектор]
+                                 p На профессиональных форумах, конференциях и симпозиумах в РФ и за рубежом. Благодаря этому она остается всегда в курсе последних научных исследований и достижений в сфере оптометрии.
+                     
+                     .founder__about
+                        .founder__photo.img-cover
+                           img(src="images/founder/founder.jpg", alt="Наталья Вадимовна Ринская" width="690" height="691")
+                        p.founder__description Магистр оптометрии, специалист по бинокулярным нарушениям
+
+      section.section.section--team
+         .section__header.section__header--detailed
+            p.text-dots Нести пользу могут только настоящие профессионалы. Знакомьтесь:
+            h2.section__title Специалисты #[span клиники]
+         .section__wrapper
+            .team
+               .team__inner
+                  ul.team__grid.grid
+                     li.team__item
+                        .team__photo.img-cover
+                           img(src="images/team/team-1.jpg", alt="Дари Георгиевна Бальжинова" width="314" height="342")
+                        .team__info
+                           p.team__name Дари Георгиевна Бальжинова
+                           p.team__pro Офтальмолог, заведующая направлением “Визуальная терапия”
+                     li.team__item
+                        .team__photo.img-cover
+                           img(src="images/team/team-2.jpg", alt="Наталья Алексеевна Пиотровская" width="314" height="342")
+                        .team__info
+                           p.team__name Наталья Алексеевна Пиотровская
+                           p.team__pro Офтальмолог
+                     li.team__item
+                        .team__photo.img-cover
+                           img(src="images/team/team-3.jpg", alt="Рузалия Рифкатовна Мустафина" width="314" height="342")
+                        .team__info
+                           p.team__name Рузалия Рифкатовна Мустафина
+                           p.team__pro Оптометрист
+                     li.team__item
+                        .team__photo.img-cover
+                           img(src="images/team/team-4.jpg", alt="Ирина Анатольевна Мартыненко" width="314" height="342")
+                        .team__info
+                           p.team__name Ирина Анатольевна Мартыненко
+                           p.team__pro Оптик-консультант
+                     
+                     

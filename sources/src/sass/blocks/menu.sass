@@ -1,0 +1,36 @@
+.menu
+   display: flex
+   align-items: center
+   &__burger
+      margin-right: 8px
+      color: var(--primary)
+   &__list
+      display: flex
+      align-items: center
+   &__item
+      &:not(:first-child):not(:last-child)
+         .btn
+            border-radius: 0
+      &:first-child
+         .btn
+            padding: 17px 14px 17px 24px
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+      &:last-child
+         .btn
+            padding: 17px 24px 17px 14px
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+   &__link
+      min-height: 55px
+      padding: 17px 12px
+      color: var(--primary)
+      font-size: 12px
+      background: rgba(255, 255, 255, 0.60)
+      display: inline-flex
+      justify-content: center
+      align-items: center
+   &__manage
+      margin-left: auto
+      &-btn
+         font-size: 14px
