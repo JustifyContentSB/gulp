@@ -38,4 +38,47 @@
          margin-left: 22px
       &-eye
          width: 400px
+
+   @media screen and (max-width: $width_xl)
+      &__lead
+         padding: 22px 36px
+         font-size: 26px
+      &__img
+         img
+            margin-left: 0
+      &__text
+         width: 310px
          
+   @media screen and (max-width: $width_lg)
+      &__img
+         width: 350px
+
+   @media screen and (max-width: $width_md)
+      &__lead
+         font-size: 22px
+      &__grid
+         grid-template-columns: 1fr
+      &__text
+         width: 50%
+
+   @media screen and (max-width: $width_xs)
+      &__lead
+         font-size: 20px
+      &__link
+         height: 234px
+         flex-direction: column
+      &__text
+         width: 100%
+         min-height: 50%
+         position: static
+      &__img
+         min-height: 50%
+         width: auto
+         order: 1
+         position: relative
+         img
+            width: auto
+            max-width: 300px
+            height: auto
+            position: absolute
+            bottom: 0

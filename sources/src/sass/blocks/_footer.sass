@@ -61,3 +61,64 @@
          font-size: 12px
          font-weight: 500
          text-decoration: underline
+
+   @media screen and (max-width: $width_xl)
+      &__top
+         grid-gap: 100px
+         grid-template-columns: 1fr 2fr 2fr
+      &__medium
+         justify-content: space-between
+         > *
+            &:not(:last-child)
+               margin-right: 80px
+
+   @media screen and (max-width: 1280px)
+      &__top
+         grid-gap: 50px
+      &__medium
+         justify-content: flex-start
+         > *
+            &:not(:last-child)
+               margin-right: 50px
+
+   @media screen and (max-width: 1080px)
+      &__top
+         grid-gap: 80px
+      &__medium
+         > *
+            &:not(:last-child)
+               margin-right: 40px
+
+   @media screen and (max-width: 970px)
+      &__top
+         grid-gap: 30px
+      &__left
+         grid-row-start: 1
+         grid-column-start: 1
+
+         grid-row-end: 2
+         grid-column-end: 3
+      &__right
+         grid-row-start: 1
+         grid-column-start: 3
+
+         grid-row-end: 4
+         grid-column-end: 6
+      &__medium
+         grid-row-start: 2
+         grid-column-start: 1
+
+         grid-row-end: 4
+         grid-column-end: 3
+
+   @media screen and (max-width: $width_xs)
+      --footerMargin: 20px
+      &__top
+         display: block
+         > *:not(:last-child)
+            margin-bottom: var(--footerMargin)
+      &__nav
+         margin: 0
+         margin-bottom: var(--footerMargin)
+      &__medium
+         flex-direction: column

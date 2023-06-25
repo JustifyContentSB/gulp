@@ -15,3 +15,19 @@
          background-position: center
    &__menu
       margin-bottom: 35px
+
+   @media screen and (max-width: $width_lg)
+      &__inner
+         min-height: 500px
+         .header--index &
+            min-height: 500px
+
+   @media screen and (max-width: $width_md)
+      &--index
+         margin-bottom: 147px
+
+   @media screen and (max-width: $width_xs)
+      &__inner
+         padding: 14px 8px
+      &__menu
+         margin-bottom: 45px

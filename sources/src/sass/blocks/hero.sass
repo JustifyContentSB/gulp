@@ -4,17 +4,23 @@
    &__title
       font-weight: 400
       font-size: 84px
-      span
-         display: block
       &-colour
+         display: block
          color: var(--accent)
       &-right
          padding-right: 26px
          text-align: right
          display: block
+      &-pic
+         position: relative
+         br
+            display: none
       &-logo
          display: inline-block
          width: 95px
+         position: absolute
+         left: calc(100% + 20px)
+         top: 0
    &__cite
       width: 100%
       max-width: 417px
@@ -30,6 +36,9 @@
          max-width: 518px
          font-size: 18px
          line-height: 155%
+         a
+            font-weight: 700
+            color: var(--accent)
       &-content
          width: 635px
          position: relative
@@ -38,3 +47,94 @@
          position: absolute
          top: -160px
          right: 0
+   
+   @media screen and (max-width: $width_xl)
+      &__title
+         margin-bottom: 20px
+         font-size: 68px
+         &-colour
+            padding-right: 60px
+      &__cite
+         margin-top: 0
+
+   @media screen and (max-width: $width_lg)
+      &__title
+         font-size: 60px
+         &-pic
+            br
+               display: inline
+         &-logo
+            left: 240px
+            top: -10px
+         &-colour
+            padding-right: 0
+      &__bottom
+         margin-top: 100px
+         &-content
+            width: 500px
+            flex-shrink: 0
+         &-img
+            top: -90px
+
+   @media screen and (max-width: $width_md)
+      &__title
+         font-size: 54px
+         &-logo
+            left: 200px
+            top: -20px
+      &__bottom
+         flex-direction: column
+         &-text
+            max-width: 100%
+         &-content
+            width: 100%
+            max-width: 100%
+            height: 150px
+         &-img
+            width: 100%
+            max-width: 400px
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+
+   @media screen and (max-width: $width_xs)
+      &__inner
+         padding: 8px
+      &__title
+         font-size: 48px
+      &__cite
+         font-size: 18px
+      &__bottom
+         margin-top: 35px
+         &-text
+            font-size: 16px
+
+   @media screen and (max-width: 600px)
+      &__title
+         font-size: 29px
+         &-logo
+            left: 119px
+            top: -45px
+         &-colour
+            padding-left: 30px
+            text-align: left
+      &__cite
+         font-size: 14px
+         line-height: 160%
+
+   @media screen and (max-width: 400px)
+      &__title
+         margin-bottom: 28px
+         &-colour
+            text-align: right
+            padding-left: 0
+            font-size: 27px
+      &__bottom
+         margin-top: 42px
+         &-text
+            line-height: 175%
+         &-content
+            height: 56px
+         &-img
+            top: -15px
+            left: 56%
