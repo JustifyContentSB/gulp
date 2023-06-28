@@ -1,14 +1,14 @@
 .author
    &__grid
       background: var(--sectionBg)
-      border-radius: 40px
+      border-radius: var(--radius)
       grid-template-columns: 690px auto
       grid-gap: 0
    &__photo
       width: 100%
       max-width: 690px
       flex-shrink: 0
-      border-radius: 40px
+      border-radius: var(--radius)
       overflow: hidden
       img
          width: 100%
@@ -24,9 +24,47 @@
    &__text
       margin-bottom: 16px
       line-height: 128%
+   &__info
+      margin-bottom: 20px
    &__manage
       margin-top: auto
+
+   @media screen and (max-width: 1400px)
+      &__grid
+         grid-template-columns: 1fr 1fr
+      &__content
+         padding: 40px
+
+   @media screen and (max-width: 1280px)
+      &__grid
+         grid-template-columns: 2fr 3fr
+
+   @media screen and (max-width: 1100px)
+      &__grid
+         grid-template-columns: 1fr 1fr
+      &__manage
+         grid-template-columns: 1fr
+
+   @media screen and (max-width: $width_md)
+      &__grid
+         grid-template-columns: 1fr
+      &__manage
+         grid-template-columns: 1fr 1fr
+      &__photo
+         max-width: 100%
+
+   @media screen and (max-width: $width_xs)
+      &__content
+         padding: 24px
+      &__title
+         margin-bottom: 24px
+      &__manage
+         grid-template-columns: 1fr
 
 .section
    &--author
       margin-bottom: 100px
+
+   @media screen and (max-width: $width_lg)
+      &--author
+         margin-bottom: 60px

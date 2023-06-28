@@ -1,0 +1,42 @@
+.faq
+   --faqItemPadding: 24px
+   &__inner
+      padding: 50px 20px
+   &__item
+      margin-bottom: 16px
+      border-radius: 16px
+      background: #fff
+      &:last-child
+         margin-bottom: 0
+   &__btn
+      padding: 26px var(--faqItemPadding) 25px
+      display: flex
+      font-size: 18px
+      font-weight: 500
+      position: relative
+      &::after
+         content: "\e90b"
+         font-family: icomoon
+         speak: none
+         position: absolute
+         right: var(--faqItemPadding)
+         top: 50%
+         transform: translateY(-50%)
+         color: var(--accent)
+         transition: transform var(--transition-duration) ease
+      &.is-active
+         &::after
+            transform: rotate(45deg) translateY(-50%) translateX(-10px)
+   &__answer
+      padding: var(--faqItemPadding)
+      display: none
+
+.section
+   &--faq
+      background: var(--sectionBg)
+      .section
+         &__title
+            max-width: 100%
+            margin-left: 0
+         &__wrapper
+            padding-top: 30px

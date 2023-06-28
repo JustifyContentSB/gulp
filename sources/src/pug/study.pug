@@ -1,6 +1,33 @@
 extends base/_layout
 block head
    title Обучение
+block header
+   header.header.header--study
+      .header__inner
+         .header__menu.menu
+            a.btn-circle.menu__burger(href="#" aria-label="открыть меню")
+               i.icon.icon-burger
+            nav.menu__nav
+               ul.menu__list
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="#") Пациентам
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="#") Обучение
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="#") Контакты
+            .menu__manage
+               a.btn.menu__manage-btn(href="#") Оставить заявку
+         section.header__hero.hero
+            .hero__inner
+               .hero__top
+                  h1.hero__title
+                     span Школа Оптометрии
+                     span.hero__title-colour Натальи Ринской
+                  p.hero__description В Школе оптометрии Натальи Ринской, основанной в 2018 году, проводятся на регулярной основе очные семинары по оптометрии. Данное обучение предназначено для практикующих оптометристов и врачей офтальмологов.
+         .header__logo
+            img(src="images/elements/logo.png", alt="логотип" width="154")
+         .header__natalya
+            img(src="images/header/natalya.png", alt="Наталья Ринская" width="414" height="650")
 block page
    main.main
       section.section.section--advice
@@ -22,22 +49,22 @@ block page
             .event
                .event__inner
                   ul.event__grid.grid
-                     li.event__item
+                     li.event__item.box
                         h3.event__title.title Офлайн мероприятия:
                         .event__text
                            p Только на очных семинарах вы сможете получить необходимые для работы практические навыки и ответы на все профессиональные вопросы, которые вас волнуют. Знания, полученные на семинарах и почерпнутые из книги, помогут вам увеличить количество рецептурных линз (призматические, прогрессивные, офисные индивидуальные монофокальные), назначаемых вами или вашими сотрудниками. 
 
                            p Кроме того, что вы научитесь подбирать и назначать сложную коррекцию зрения и решать проблемы пациентов, вы также повысите средний чек в вашей организации.
-                     li.event__item.event__item--secondary
+                     li.event__item.event__item--secondary.box
                         .event__schedule
                            h3.event__title.title Расписание мероприятий #[br] на июнь 2023 года:
                            p.event__desc #[b 10-11 июля 2023 г.] - семинар “Алгоритм подбора коррекции зрения”
                            a.link.link--gray(href="#") Стоимость участия за два дня - 30.000р
                         ul.event__manage.manage
                            li
-                              a.btn(href="#") Купить
+                              a.btn.btn--wide(href="#") Купить
                            li
-                              a.btn.btn--outline(href="#") Запросить консультацию
+                              a.btn.btn--wide.btn--outline(href="#") Запросить консультацию
                      
       section.section.section--author
          .section__wrapper
@@ -46,16 +73,16 @@ block page
                   .author__grid.grid
                      .author__photo
                         img(src="images/author/author.png", alt="Автор: Н.В. Ринская" width="690" height="710")
-                     .author__content
+                     .author__content.box
                         .author__info
                            h2.author__title.title “Настольная книга оптометриста” #[br] Учебное пособие. Автор: Н.В. Ринская
                            p.author__text.text В свете современных мировых достижений в области оптометрии представлены самые последние научные данные о распространённых зрительных отклонениях, основных методах диагностики нарушений рефракции глаза и методах их коррекции. 
                            a.link(href="#") Стоимость книги - 8.000 рублей
                         ul.author__manage.manage
                            li
-                              a.btn(href="#") Купить
+                              a.btn.btn--wide(href="#") Купить
                            li
-                              a.btn.btn--outline(href="#") Запросить консультацию
+                              a.btn.btn--wide.btn--outline(href="#") Запросить консультацию
 
       section.section.section--feedback
          .section__wrapper
@@ -85,7 +112,7 @@ block page
                                     span.form__agree-checkbox
                                     span Соглашаюсь на обработку персональных данных
                               .form__bottom
-                                 button.form__submit.btn Оставить заявку
+                                 button.form__submit.btn.btn--wide Оставить заявку
 
       section.section.section--parts
          .section__wrapper

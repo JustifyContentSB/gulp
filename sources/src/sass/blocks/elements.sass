@@ -79,12 +79,23 @@
 
 .text-dots
    padding-left: 32px
-   font-size: 16px
+   position: relative
+   &--small
+      max-width: 282px
+      font-size: 14px
+   &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 5px
+      width: 14px
+      height: 5px
+      background: url('../images/elements/dots.svg') no-repeat center / contain
 
 .img-cover
    width: 100%
    padding-bottom: 60%
-   border-radius: 40px
+   border-radius: var(--radius)
    overflow: hidden
    position: relative
    img
@@ -112,9 +123,29 @@
       &:last-child
          margin-bottom: 0
       p
-         margin-bottom: 8px
+         margin-bottom: 14px
          &:last-child
             margin-bottom: 0
       b
          font-size: 18px
          font-weight: 500
+
+.box
+   border-radius: var(--radius)
+   background: var(--sectionBg)
+
+@media screen and (max-width: $width_lg)
+   .title
+      font-size: 24px
+      &--small
+         font-size: 22px
+
+@media screen and (max-width: $width_xs)
+   .link
+      font-size: 16px
+   .btn
+      font-size: 14px
+   .title
+      font-size: 22px
+      &--small
+         font-size: 20px

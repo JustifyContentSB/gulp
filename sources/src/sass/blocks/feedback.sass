@@ -2,7 +2,7 @@
    &__grid
       padding: 20px 20px 15px
       background: linear-gradient(#A7C3E7, #C6D8EF, #A7C3E7, #B8CFED, #CAE0FE, #D4E7FF, #B8D7FF)
-      border-radius: 40px
+      border-radius: var(--radius)
       overflow: hidden
       grid-gap: 20px
       position: relative
@@ -14,7 +14,24 @@
       //    height: 299px
       //    background: url('../images/elements/lines.svg') no-repeat center
    &__title
-      padding-right: 50px
+      padding-right: 30px
+   &__info
+      padding: 20px
+      color: #fff
+
+   @media screen and (max-width: $width_md)
+      &__title
+         padding-right: 0
+
+   @media screen and (max-width: $width_xs)
+      &__info
+         padding: 10px
+      &__title
+         font-size: 20px
+
+   @media screen and (max-width: $width_mob)
+      &__info
+         padding: 0
 
 .section
    &--feedback

@@ -26,3 +26,17 @@
             border-radius: 50%
             color: #fff
             font-size: 9px
+
+   @media screen and (max-width: $width_lg)
+      &__item
+         .icon-check
+            width: 20px
+            height: 20px
+            right: -20px
+            &::before
+               font-size: 7px
+
+   @media screen and (max-width: $width_xs)
+      &__item
+         &--secondary
+            font-size: 16px

@@ -1,6 +1,6 @@
 .optics
    &__item
-      border-radius: 40px
+      border-radius: var(--radius)
       overflow: hidden
       background: var(--sectionBg)
    &__title
@@ -14,12 +14,25 @@
       flex-direction: column
       position: relative
       z-index: 1
+      &::after
+         content: ''
+         position: absolute
+         right: -30px
+         top: 20px
+         width: 36px
+         height: 8px
+         background: url('../images/elements/dots-02.svg') no-repeat center / contain
       p
          margin-bottom: 20px
          font-size: 18px
+         line-height: 150%
    &__btn
       min-width: 250px
       margin-top: auto
       align-self: start
    &__img
       padding-bottom: 71.5%
+
+.section
+   &--optics
+      margin-bottom: 100px

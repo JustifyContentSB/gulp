@@ -2,11 +2,19 @@
    margin-bottom: 100px
    &--index
       margin-bottom: 35px
+   &--study
+      margin-bottom: 70px
+   &--patients
+      color: #fff
+      .header
+         &__inner
+            background: linear-gradient(#A7C3E7, #CAE0FE, #D4E7FF, #B8D7FF)
    &__inner
       min-height: 781px
       padding: 16px
       background: rgba(lightgray, 50%)
-      border-radius: 40px
+      border-radius: var(--radius)
+      position: relative
       .header--index &
          min-height: 662px
          background-image: url('../images/header/index-fon.png')
@@ -15,19 +23,70 @@
          background-position: center
    &__menu
       margin-bottom: 35px
+   &__natalya
+      width: 414px
+      position: absolute
+      bottom: 0
+      right: 58px
+      display: flex
+      justify-content: flex-end
+      img
+         width: 414px
+         height: auto
+   &__logo
+      width: 154px
+      position: absolute
+      bottom: 36px
+      left: 36px
+   &__eye
+      width: 585px
+      position: absolute
+      right: 77px
+      bottom: 25px
+      img
+         width: 100%
+
+   @media screen and (max-width: 1280px)
+      &--study
+         margin-bottom: 30px
+      &__natalya
+         width: 340px
 
    @media screen and (max-width: $width_lg)
       &__inner
-         min-height: 500px
+         min-height: 750px
          .header--index &
             min-height: 500px
+      &__natalya
+         width: 300px
 
    @media screen and (max-width: $width_md)
       &--index
          margin-bottom: 147px
 
    @media screen and (max-width: $width_xs)
+      &--study
+         .header
+            &__inner
+               padding-bottom: 460px
       &__inner
          padding: 14px 8px
       &__menu
          margin-bottom: 45px
+      &__natalya
+         width: 280px
+      &__logo
+         width: 100px
+         bottom: 360px
+
+   @media screen and (max-width: 600px)
+      &__natalya
+         width: 240px
+
+   @media screen and (max-width: 400px)
+      &__natalya
+         width: 220px
+
+   @media screen and (max-width: 360px)
+      &__natalya
+         width: 190px

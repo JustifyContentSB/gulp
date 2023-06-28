@@ -1,7 +1,7 @@
 .form
    &__inner
       padding: 36px 36px 44px
-      border-radius: 40px
+      border-radius: var(--radius)
       background: #fff
    &__top
       margin-bottom: 50px
@@ -35,6 +35,8 @@
       color: var(--gray)
       input
          display: none
+         &:checked ~ *
+            color: var(--accent)
       &-label
          display: inline-flex
          cursor: pointer
@@ -43,10 +45,32 @@
          min-width: 16px
          height: 16px
          margin-right: 8px
-         display: inline-block
+         display: inline-flex
+         justify-content: center
+         align-items: center
          border-radius: 3px
-         border: 1px solid var(--gray)
+         border: var(--border)
+         position: relative
+         &::after
+            content: '\e903'
+            font-family: 'icomoon'
+            speak: none
+            font-size: 8px
+            color: var(--accent)
+            opacity: 0
          input:checked ~ &
-            background: red
-   &__submit
-      width: 100%
+            border-color: var(--accent)
+            &::after
+               opacity: 1
+
+   @media screen and (max-width: $width_xs)
+      &__top
+         margin-bottom: 30px
+
+   @media screen and (max-width: $width_mob)
+      &__inner
+         padding: 30px
+
+   @media screen and (max-width: 400px)
+      &__inner
+         padding: 20px

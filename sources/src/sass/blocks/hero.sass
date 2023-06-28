@@ -1,4 +1,6 @@
 .hero
+   .header--study &
+      max-width: 910px
    &__inner
       padding: 20px
    &__title
@@ -28,6 +30,11 @@
       font-size: 24px
       line-height: 120%
       font-weight: 500
+   &__lead
+      width: 100%
+      max-width: 585px
+      font-size: 18px
+      line-height: 140%
    &__bottom
       margin-top: 166px
       display: flex
@@ -47,6 +54,17 @@
          position: absolute
          top: -160px
          right: 0
+   &__description
+      margin-top: 34px
+      max-width: 724px
+      font-size: 18px
+      line-height: 144%
+   .header--patients &
+      &__top
+         max-width: 800px
+      &__title
+         margin-bottom: 10px
+         font-size: 120px
    
    @media screen and (max-width: $width_xl)
       &__title
@@ -56,6 +74,9 @@
             padding-right: 60px
       &__cite
          margin-top: 0
+      .header--patients &
+         &__title
+            font-size: 100px
 
    @media screen and (max-width: $width_lg)
       &__title
@@ -75,6 +96,9 @@
             flex-shrink: 0
          &-img
             top: -90px
+      &__description
+         max-width: 62%
+         font-size: 16px
 
    @media screen and (max-width: $width_md)
       &__title
@@ -108,6 +132,9 @@
          margin-top: 35px
          &-text
             font-size: 16px
+      &__description
+         max-width: 100%
+         margin-top: 20px
 
    @media screen and (max-width: 600px)
       &__title
@@ -115,7 +142,7 @@
          &-logo
             left: 119px
             top: -45px
-         &-colour
+         .header--index &-colour
             padding-left: 30px
             text-align: left
       &__cite
@@ -125,7 +152,7 @@
    @media screen and (max-width: 400px)
       &__title
          margin-bottom: 28px
-         &-colour
+         .header--index &-colour
             text-align: right
             padding-left: 0
             font-size: 27px

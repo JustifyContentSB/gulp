@@ -4,7 +4,7 @@
    &__item
       min-height: 340px
       padding: 28px 12px 12px
-      border-radius: 40px
+      border-radius: var(--radius)
       background: var(--sectionBg)
       position: relative
       overflow: hidden
@@ -27,12 +27,46 @@
       display: flex
       justify-content: space-between
    &__img
+      max-width: 226px
       position: absolute
       right: 0
       bottom: 0
 
+   @media screen and (max-width: $width_xl)
+      &__title
+         font-size: 22px
+      &__img
+         max-width: 200px
+         max-height: 300px
+
+   @media screen and (max-width: 1280px)
+      &__img
+         max-width: 180px
+         max-height: 270px
+
+   @media screen and (max-width: $width_lg)
+      &__grid
+         grid-template-columns: repeat(2, 1fr)
+      &__img
+         max-width: 226px
+         max-height: 350px
+
+   @media screen and (max-width: $width_md)
+      &__img
+         max-width: 180px
+         max-height: 270px
+
+   @media screen and (max-width: $width_md)
+      &__grid
+         grid-template-columns: 1fr
+      &__img
+         max-width: 226px
+         max-height: 350px
+
+
 .section
    &--services
+      margin-bottom: 100px
       .section
          &__header
             .text-dots

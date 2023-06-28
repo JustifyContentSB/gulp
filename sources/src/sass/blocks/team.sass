@@ -9,14 +9,26 @@
       padding-top: 20px
       padding-right: 30px
    &__name
-      margin-bottom: 8px
+      margin-bottom: 10px
       font-size: 20px
       font-weight: 500
    &__pro
       font-size: 14px
       color: var(--gray)
 
+   @media screen and (max-width: $width_xl)
+      &__photo
+         min-height: 200px
+      &__name
+         font-size: 18px
+
 .section
    &--team
+      margin-bottom: 100px
       padding-top: 100px
       border-top: 1px solid rgba(#111, 0.1)
+      .section
+         &__header
+            margin-bottom: 86px
+         &__title
+            margin-left: 170px
