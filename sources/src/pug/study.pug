@@ -10,11 +10,11 @@ block header
             nav.menu__nav
                ul.menu__list
                   li.menu__item
-                     a.menu__link.btn.btn--light(href="#") Пациентам
+                     a.menu__link.btn.btn--light(href="patients.html") Пациентам
                   li.menu__item
-                     a.menu__link.btn.btn--light(href="#") Обучение
+                     a.menu__link.btn.btn--light(href="study.html") Обучение
                   li.menu__item
-                     a.menu__link.btn.btn--light(href="#") Контакты
+                     a.menu__link.btn.btn--light(href="index.html") Контакты
             .menu__manage
                a.btn.menu__manage-btn(href="#") Оставить заявку
          section.header__hero.hero
@@ -25,9 +25,9 @@ block header
                      span.hero__title-colour Натальи Ринской
                   p.hero__description В Школе оптометрии Натальи Ринской, основанной в 2018 году, проводятся на регулярной основе очные семинары по оптометрии. Данное обучение предназначено для практикующих оптометристов и врачей офтальмологов.
          .header__logo
-            img(src="images/elements/logo.png", alt="логотип" width="154")
-         .header__natalya
-            img(src="images/header/natalya.png", alt="Наталья Ринская" width="414" height="650")
+            img(src="images/elements/empty.gif" data-src="images/elements/logo.png", data-lazyload, alt="логотип" width="154")
+         .header__natalya.animation
+            img(src="images/elements/empty.gif" data-src="images/header/natalya.png", data-lazyload, alt="Наталья Ринская" width="414" height="650")
 block page
    main.main
       section.section.section--advice
@@ -38,7 +38,7 @@ block page
                .advice__inner
                   ul.advice__grid.grid
                      li.advice__item
-                        p Если вы хотите, чтобы вы или ваши сотрудники повысили свой уровень знаний и расширили перечень оказываемых услуг в вашей оптике или клинике, научились решать проблемы пациентов, связанные с бинокулярными нарушениями,
+                        p.text-dots Если вы хотите, чтобы вы или ваши сотрудники повысили свой уровень знаний и расширили перечень оказываемых услуг в вашей оптике или клинике, научились решать проблемы пациентов, связанные с бинокулярными нарушениями,
                      li.advice__item.advice__item--secondary
                         p Рекомендуем вам приобрести “Настольную книгу оптометриста”, прослушать вебинары и посетить очные семинары магистра оптометрии и педагогики Натальи Ринской. #[i.icon-check]
 
@@ -72,7 +72,7 @@ block page
                .author__inner
                   .author__grid.grid
                      .author__photo
-                        img(src="images/author/author.png", alt="Автор: Н.В. Ринская" width="690" height="710")
+                        img(src="images/elements/empty.gif" data-src="images/author/author.png", data-lazyload, alt="Автор: Н.В. Ринская" width="690" height="710")
                      .author__content.box
                         .author__info
                            h2.author__title.title “Настольная книга оптометриста” #[br] Учебное пособие. Автор: Н.В. Ринская
@@ -125,7 +125,7 @@ block page
                               h2.parts__title.title.title--small Библиотека знаний
                            .parts__bottom
                               a.btn.btn--wide(href="#") Узнать полезную информацию
-                        img.parts__bg(src="images/parts/parts-1.png", alt="картинка")
+                        img.parts__bg(src="images/elements/empty.gif" data-src="images/parts/parts-1.png", data-lazyload, alt="картинка")
                      li.parts__item.parts__item--secondary
                         .parts__info
                            .parts__top
@@ -133,13 +133,13 @@ block page
                               p.parts__desc Хотите задать вопрос? Переходите на наш форум
                               ul.parts__forum
                                  li
-                                    img(src="images/parts/forum-1.png", alt="форум" width="64" height="64")
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-1.png", data-lazyload, alt="форум" width="64" height="64")
                                  li
-                                    img(src="images/parts/forum-2.png", alt="форум" width="64" height="64")
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-2.png", data-lazyload, alt="форум" width="64" height="64")
                                  li
-                                    img(src="images/parts/forum-3.png", alt="форум" width="64" height="64")
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-3.png", data-lazyload, alt="форум" width="64" height="64")
                                  li
-                                    img(src="images/parts/forum-4.png", alt="форум" width="64" height="64")
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-4.png", data-lazyload, alt="форум" width="64" height="64")
                            .parts__bottom
                               a.btn.btn--light.btn--wide(href="#") Перейти на форум
 

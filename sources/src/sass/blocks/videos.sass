@@ -1,4 +1,11 @@
 .videos
+   &__slide
+      border-radius: var(--radius)
+      overflow: hidden
+      &:hover,
+      &:focus
+         .videos__preview
+            transform: scale(1.1)
    &__play
       width: 72px
       height: 72px
@@ -21,3 +28,8 @@
          font-size: 20px
    &__preview
       padding-bottom: 64%
+      transition: transform var(--transition-duration) ease
+
+.section
+   &--videos
+      margin-bottom: 0

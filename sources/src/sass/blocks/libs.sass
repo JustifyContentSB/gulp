@@ -13,6 +13,14 @@
          align-items: center
          cursor: pointer
          position: static
+         transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+         &:hover,
+         &:focus
+            background: var(--hover-color)
+            color: #fff
          &::after
             font-size: 12px
             font-weight: bold
+
+.animation
+   transition: all .3s ease-out

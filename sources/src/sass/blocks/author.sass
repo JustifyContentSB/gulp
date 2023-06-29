@@ -19,6 +19,15 @@
       background: var(--sectionBg)
       display: flex
       flex-direction: column
+      position: relative
+      &::after
+         content: ''
+         position: absolute
+         right: 20px
+         top: 25px
+         width: 14px
+         height: 5px
+         background: url('../images/elements/dots.svg')
    &__title
       margin-bottom: 42px
    &__text

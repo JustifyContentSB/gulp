@@ -20,13 +20,16 @@
       width: 100%
       padding: 12px
       background: var(--sectionBg)
-      border: none
+      border: 1px solid transparent
       border-radius: 8px
       resize: none
       font-size: 14px
       color: var(--primary)
+      transition: border-color var(--transition-duration) ease
       &::placeholder
          color: var(--gray)
+      &:focus
+         border-color: var(--accent)
    &__textarea
       min-height: 110px
    &__agree

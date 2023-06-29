@@ -9,13 +9,24 @@
    border-radius: 100px
    color: #fff
    cursor: pointer
+   transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      background: var(--hover-color)
    &--light
       background: #fff
       color: var(--accent)
+      &:hover,
+      &:focus
+         background: var(--accent)
+         color: #fff
    &--outline
       background: #fff
       border: 1px solid var(--accent)
       color: var(--accent)
+      &:hover,
+      &:focus
+         color: #fff
    &--wide
       width: 100%
 
@@ -30,6 +41,12 @@
    display: inline-flex
    justify-content: center
    align-items: center
+   transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      background: var(--hover-color)
+      border-color: var(--hover-color)
+      color: #fff
 
 .btn-info
    padding: 20px
@@ -52,6 +69,10 @@
    font-weight: 500
    white-space: nowrap
    color: var(--accent)
+   transition: color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      color: var(--hover-color)
 
 .title
    font-size: 28px
@@ -70,6 +91,11 @@
    display: inline-block
    font-size: 18px
    font-weight: 500
+   transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      background: var(--hover-color)
+      color: #fff
    &--gray
       background: var(--sectionBg)
 
@@ -120,6 +146,7 @@
          left: 0
          top: 0
          color: var(--accent)
+         font-size: 16px
       &:last-child
          margin-bottom: 0
       p
@@ -149,3 +176,11 @@
       font-size: 22px
       &--small
          font-size: 20px
+   .list
+      &__item
+         font-size: 14px
+         line-height: 140%
+         b
+            font-size: 16px
+         &::before
+            font-size: 14px

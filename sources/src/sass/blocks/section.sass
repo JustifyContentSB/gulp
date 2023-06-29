@@ -5,12 +5,18 @@
       .section
          &__header
             margin: 0 20px
+   &--large
+      margin-bottom: 100px
+      .section
+         &__header
+            margin: 0 20px
    &__header
       margin-bottom: 68px
       position: relative
       &--detailed
          display: flex
          align-items: flex-start
+         flex-wrap: wrap
          .section
             &__title
                margin-right: 145px
@@ -49,26 +55,53 @@
    @media screen and (max-width: $width_xl)
       &__title
          font-size: 36px
+      &__header
+         margin-bottom: 40px
       &--big
          .section
             &__wrapper
                padding-top: 50px
             &__title
                margin-left: 80px
-         .text-dots
-            max-width: 100%
    
    @media screen and (max-width: $width_lg)
       margin-bottom: 50px
+      &--large
+         margin-bottom: 70px
+      &__header
+         &--detailed
+            display: flex
+            flex-direction: column
+            .section
+               &__title
+                  margin-right: 0
       &__title
          font-size: 32px
       &--big
+         padding-top: 70px
          .section
             &__header
                flex-direction: column
+            &__wrapper
+               padding-top: 20px
             &__title
                max-width: 100%
                margin: 0
                margin-bottom: 30px
                order: -1
+      .text-dots
+         max-width: 100%
+      &__controls
+         margin-top: 30px
+
+   @media screen and (max-width: $width_xs)
+      margin-bottom: 30px
+      &--large
+         margin-bottom: 50px
+      &--big
+         padding-top: 50px
+         margin-left: -16px
+         margin-right: -16px
+      &__title
+         font-size: 24px
       

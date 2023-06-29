@@ -7,6 +7,7 @@
 // From libs:
 //@import "../libs/LIB_NAME/path/to/style.scss"
 @import "../libs/swiper/swiper-bundle.min.css"
+@import "../libs/fancybox/dist/css/jquery.fancybox.css"
 
 html
    box-sizing: border-box
@@ -32,6 +33,7 @@ body
    -moz-osx-font-smoothing: grayscale
    color: var(--primary)
    font-size: 16px
+   overflow-x: hidden
 
 a
    text-decoration: none
@@ -112,3 +114,9 @@ picture
 @media screen and (max-width: $width_xs)
    .wrapper
       padding: 16px
+   .container
+      padding: 0 26px
+
+@media screen and (max-width: $width_mob)
+   .container
+      padding: 0 16px

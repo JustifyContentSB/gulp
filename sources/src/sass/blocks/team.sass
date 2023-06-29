@@ -2,6 +2,10 @@
    &__grid
       grid-template-columns: repeat(4, 1fr)
       grid-gap: 24px
+   &__item
+      transform: scale(0.8)
+      &.animated
+         transform: scale(1)
    &__photo
       min-height: 342px
       padding-bottom: 102%
@@ -22,13 +26,24 @@
       &__name
          font-size: 18px
 
+   @media screen and (max-width: $width_lg)
+      &__grid
+         grid-template-columns: repeat(2, 1fr)
+
+   @media screen and (max-width: $width_mob)
+      &__grid
+         grid-template-columns: 1fr
+
 .section
    &--team
-      margin-bottom: 100px
       padding-top: 100px
       border-top: 1px solid rgba(#111, 0.1)
-      .section
-         &__header
-            margin-bottom: 86px
-         &__title
-            margin-left: 170px
+      background: transparent
+
+   @media screen and (max-width: $width_lg)
+      &--team
+         padding-top: 70px
+
+   @media screen and (max-width: $width_xs)
+      &--team
+         padding-top: 50px

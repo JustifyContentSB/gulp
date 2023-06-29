@@ -16,6 +16,12 @@
       align-items: center
       color: var(--accent)
       font-size: 16px
+      transition: background var(--transition-duration) ease, color var(--transition-duration) ease, border var(--transition-duration) ease
+      &:hover,
+      &:focus
+         border-color: var(--hover-color)
+         background: var(--hover-color)
+         color: #fff
       .icon
          &-vk
             font-size: 14px

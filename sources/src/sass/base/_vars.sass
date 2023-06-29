@@ -15,10 +15,30 @@ $grid-columns: 12
    --accent: #2E80EC
    --gray: #B0B0B0
    --sectionBg: #F6F6F6
+   --hover-color: #3675bd
    
    //sizes
    --radius: 40px
    --border: 1px solid var(--gray)
 
    //other
-   --transition-duration: .3s
+   --transition-duration: .2s
+
+%hover-line
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: auto
+      right: 0
+      width: 0
+      height: 1px
+      background: var(--primary)
+      transition: width var(--transition-duration) ease
+   &:hover,
+   &:focus
+      &::after
+         width: 100%
+         left: 0
+         right: auto
