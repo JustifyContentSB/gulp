@@ -92,12 +92,19 @@
    font-size: 18px
    font-weight: 500
    transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &--gray
+      background: var(--sectionBg)
+   &--green
+      color: #00A839
+   &--red
+      color: #EC2E2E
+
+a.link,
+button.link
    &:hover,
    &:focus
       background: var(--hover-color)
       color: #fff
-   &--gray
-      background: var(--sectionBg)
 
 .text
    font-size: 16px
@@ -147,6 +154,12 @@
          top: 0
          color: var(--accent)
          font-size: 16px
+      .list--green &
+         &::before
+            color: #00A839
+      .list--red &
+         &::before
+            color: #EC2E2E
       &:last-child
          margin-bottom: 0
       p

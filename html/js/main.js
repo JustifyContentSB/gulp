@@ -61,3 +61,4 @@ function videosSlider() {
     }
   });
 }
+Fancybox.bind("[data-fancybox]", {});

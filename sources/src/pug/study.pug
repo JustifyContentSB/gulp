@@ -5,9 +5,9 @@ block header
    header.header.header--study
       .header__inner
          .header__menu.menu
-            a.btn-circle.menu__burger(href="#" aria-label="открыть меню")
+            a.btn-circle.menu__burger(href="#menu" aria-label="открыть меню" data-fancybox)
                i.icon.icon-burger
-            nav.menu__nav
+            nav.menu__nav#menu
                ul.menu__list
                   li.menu__item
                      a.menu__link.btn.btn--light(href="patients.html") Пациентам
@@ -16,7 +16,7 @@ block header
                   li.menu__item
                      a.menu__link.btn.btn--light(href="index.html") Контакты
             .menu__manage
-               a.btn.menu__manage-btn(href="#") Оставить заявку
+               a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
          section.header__hero.hero
             .hero__inner
                .hero__top
