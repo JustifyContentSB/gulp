@@ -6,6 +6,7 @@
    &__title
       font-weight: 400
       font-size: 84px
+      line-height: 120%
       &-colour
          display: block
          color: var(--accent)
@@ -26,10 +27,13 @@
          transform: translateX(80px)
          &.animated
             transform: translateX(0)
+   &__top
+      & > *:last-child
+         margin-bottom: 0
    &__cite
       width: 100%
       max-width: 417px
-      margin-top: -66px
+      margin-top: -71px
       font-size: 24px
       line-height: 120%
       font-weight: 500
@@ -59,7 +63,7 @@
          width: 100%
          position: absolute
          top: -160px
-         right: 0
+         right: -6px
          transform: rotate(0) translateX(180px) translateY(0)
          &.animated
             transform: rotate(0) translateX(0) translateY(0)
@@ -103,8 +107,10 @@
             top: -10px
          &-colour
             padding-right: 0
+         &-right
+            text-align: left
       &__bottom
-         margin-top: 100px
+         margin-top: 70px
          &-content
             width: 500px
             flex-shrink: 0
@@ -113,9 +119,18 @@
       &__description
          max-width: 62%
          font-size: 16px
+      &__cite
+         margin-top: 30px
+         font-size: 20px
+         transform: translateY(0)
+         order: 1
       .header--patients &
          &__title
             font-size: 80px
+      &__inner
+         .header--index &
+            display: flex
+            flex-direction: column
 
    @media screen and (max-width: $width_md)
       .header--patients &
@@ -127,13 +142,14 @@
             left: 200px
             top: -20px
       &__bottom
+         margin-top: 30px
          flex-direction: column
          &-text
             max-width: 100%
          &-content
             width: 100%
             max-width: 100%
-            height: 150px
+            height: 160px
          &-img
             width: 100%
             max-width: 400px
@@ -145,17 +161,20 @@
       &__lead
          font-size: 16px
       &__cite
-         transform: translateY(30px)
+         margin-top: 90px
 
    @media screen and (max-width: $width_xs)
       &__inner
          padding: 8px
       &__title
          font-size: 48px
+         &-logo
+            width: 80px
+            left: 180px
       &__cite
-         font-size: 18px
+         font-size: 16px
       &__bottom
-         margin-top: 35px
+         margin-top: 10px
          &-text
             font-size: 16px
       &__description
@@ -167,30 +186,25 @@
 
    @media screen and (max-width: 600px)
       &__title
-         font-size: 29px
-         &-logo
-            left: 119px
-            top: -45px
-         .header--index &-colour
-            padding-left: 30px
-            text-align: left
-      &__cite
-         font-size: 14px
-         line-height: 160%
-
-   @media screen and (max-width: 400px)
-      &__title
+         font-size: 28px
          margin-bottom: 28px
-         .header--index &-colour
-            text-align: right
-            padding-left: 0
-            font-size: 27px
+         &-logo
+            width: 50px
+            left: 97px
+            top: -18px
       &__bottom
-         margin-top: 42px
+         margin-top: 16px
          &-text
-            line-height: 175%
+            font-size: 14px
+            line-height: 158%
          &-content
+            margin-top: 22px
             height: 56px
          &-img
+            max-width: 340px
             top: -15px
-            left: 56%
+            left: 58%
+      &__cite
+         margin-top: 138px
+         font-size: 14px
+         line-height: 160%

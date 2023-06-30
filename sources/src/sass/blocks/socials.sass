@@ -15,7 +15,7 @@
       justify-content: center
       align-items: center
       color: var(--accent)
-      font-size: 16px
+      font-size: 15px
       transition: background var(--transition-duration) ease, color var(--transition-duration) ease, border var(--transition-duration) ease
       &:hover,
       &:focus
@@ -25,3 +25,10 @@
       .icon
          &-vk
             font-size: 14px
+
+   @media screen and (max-width: $width_xs)
+      &__btn
+         width: 52px
+         min-width: 52px
+         height: 52px
+         font-size: 20px

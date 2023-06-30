@@ -46,7 +46,7 @@
 
    @media screen and (max-width: $width_xl)
       &__lead
-         padding: 22px 36px
+         padding: 26px 36px
          font-size: 26px
       &__img
          img
@@ -61,6 +61,7 @@
    @media screen and (max-width: $width_md)
       &__lead
          font-size: 22px
+         text-align: center
       &__grid
          grid-template-columns: 1fr
       &__text
@@ -70,23 +71,30 @@
             transform: translateY(0)
 
    @media screen and (max-width: $width_xs)
+      &__top
+         margin-bottom: 22px
       &__lead
          font-size: 20px
       &__link
-         height: 234px
+         height: 212px
+         min-height: auto
          flex-direction: column
       &__text
          width: 100%
-         min-height: 50%
+         height: 70px
+         padding-top: 6px
+         font-size: 20px
          position: static
       &__img
-         min-height: 50%
+         height: calc(100% - 70px)
          width: auto
          order: 1
          position: relative
+         display: flex
+         justify-content: center
          img
             width: auto
-            max-width: 300px
+            max-width: 220px
             height: auto
             position: absolute
             bottom: 0

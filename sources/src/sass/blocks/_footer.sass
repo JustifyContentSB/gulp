@@ -3,7 +3,7 @@
       padding: 20px 0 0
    &__top
       padding: 20px 0
-      margin-bottom: 20px
+      margin-bottom: 0
       display: grid
       grid-template-columns: 1fr 3fr 2fr
       grid-gap: 150px
@@ -43,7 +43,7 @@
    &__right
       > *
          &:not(:last-child)
-            margin-bottom: 20px
+            margin-bottom: 22px
    &__info
       &-title
          margin-bottom: 4px
@@ -124,11 +124,31 @@
    @media screen and (max-width: $width_xs)
       --footerMargin: 20px
       &__top
+         margin-bottom: 66px
          display: block
-         > *:not(:last-child)
+         > *:not(:last-child):not(.footer__left)
             margin-bottom: var(--footerMargin)
+      &__left
+         margin-bottom: 36px
       &__nav
-         margin: 0
-         margin-bottom: var(--footerMargin)
+         display: none
       &__medium
          flex-direction: column
+      &__contacts
+         padding: 20px
+         border-radius: var(--radius)
+         background: var(--sectionBg)
+      &__logo
+         img
+            width: 156px
+      &__docs
+         flex-direction: column
+         li
+            &:not(:last-child)
+               margin: 0
+               margin-bottom: 4px
+
+   @media screen and (max-width: $width_mob)
+      &__contacts
+         &-feedback
+            margin-bottom: 30px

@@ -1042,6 +1042,11 @@ template {
   left: 0;
   right: auto
 }
+@media screen and (max-width:767px) {
+  :root {
+    --radius: 28px
+  }
+}
 html {
   box-sizing: border-box
 }
@@ -1384,6 +1389,11 @@ button.link:hover {
   .btn {
     font-size: 14px
   }
+  .btn-circle {
+    width: 53px;
+    min-width: 53px;
+    height: 53px
+  }
   .title {
     font-size: 22px
   }
@@ -1399,6 +1409,12 @@ button.link:hover {
   }
   .list__item::before {
     font-size: 14px
+  }
+}
+@media screen and (max-width:560px) {
+  .email,
+  .tel {
+    font-size: 16px
   }
 }
 .swiper-button-next,
@@ -1459,8 +1475,7 @@ button.link:hover {
 }
 .menu__burger {
   margin-right: 8px;
-  color: var(--primary);
-  display: none
+  color: var(--primary)
 }
 .menu__list {
   display: -webkit-flex;
@@ -1468,7 +1483,10 @@ button.link:hover {
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  overflow: hidden
 }
 .menu__item:not(:first-child):not(:last-child) .btn {
   border-radius: 0
@@ -1516,6 +1534,11 @@ button.link:hover {
     display: inline-flex
   }
 }
+@media screen and (max-width:560px) {
+  .menu__manage-btn {
+    font-size: 12px
+  }
+}
 @media screen and (max-width:767px) {
   #menu.menu__nav {
     width: calc(100% - 32px);
@@ -1548,7 +1571,8 @@ button.link:hover {
 }
 .hero__title {
   font-weight: 400;
-  font-size: 84px
+  font-size: 84px;
+  line-height: 120%
 }
 .hero__title-colour {
   display: block;
@@ -1578,10 +1602,13 @@ button.link:hover {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
+.hero__top > :last-child {
+  margin-bottom: 0
+}
 .hero__cite {
   width: 100%;
   max-width: 417px;
-  margin-top: -66px;
+  margin-top: -71px;
   font-size: 24px;
   line-height: 120%;
   font-weight: 500;
@@ -1624,7 +1651,7 @@ button.link:hover {
   width: 100%;
   position: absolute;
   top: -160px;
-  right: 0;
+  right: -6px;
   -webkit-transform: rotate(0) translateX(180px) translateY(0);
   transform: rotate(0) translateX(180px) translateY(0)
 }
@@ -1680,8 +1707,11 @@ button.link:hover {
   .hero__title-colour {
     padding-right: 0
   }
+  .hero__title-right {
+    text-align: left
+  }
   .hero__bottom {
-    margin-top: 100px
+    margin-top: 70px
   }
   .hero__bottom-content {
     width: 500px;
@@ -1696,8 +1726,25 @@ button.link:hover {
     max-width: 62%;
     font-size: 16px
   }
+  .hero__cite {
+    margin-top: 30px;
+    font-size: 20px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1
+  }
   .header--patients .hero__title {
     font-size: 80px
+  }
+  .header--index .hero__inner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
   }
 }
 @media screen and (max-width:991px) {
@@ -1712,6 +1759,7 @@ button.link:hover {
     top: -20px
   }
   .hero__bottom {
+    margin-top: 30px;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
@@ -1722,7 +1770,7 @@ button.link:hover {
   .hero__bottom-content {
     width: 100%;
     max-width: 100%;
-    height: 150px
+    height: 160px
   }
   .hero__bottom-img {
     width: 100%;
@@ -1740,8 +1788,7 @@ button.link:hover {
     font-size: 16px
   }
   .hero__cite {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px)
+    margin-top: 90px
   }
 }
 @media screen and (max-width:767px) {
@@ -1751,11 +1798,15 @@ button.link:hover {
   .hero__title {
     font-size: 48px
   }
+  .hero__title-logo {
+    width: 80px;
+    left: 180px
+  }
   .hero__cite {
-    font-size: 18px
+    font-size: 16px
   }
   .hero__bottom {
-    margin-top: 35px
+    margin-top: 10px
   }
   .hero__bottom-text {
     font-size: 16px
@@ -1770,42 +1821,34 @@ button.link:hover {
 }
 @media screen and (max-width:600px) {
   .hero__title {
-    font-size: 29px
-  }
-  .hero__title-logo {
-    left: 119px;
-    top: -45px
-  }
-  .header--index .hero__title-colour {
-    padding-left: 30px;
-    text-align: left
-  }
-  .hero__cite {
-    font-size: 14px;
-    line-height: 160%
-  }
-}
-@media screen and (max-width:400px) {
-  .hero__title {
+    font-size: 28px;
     margin-bottom: 28px
   }
-  .header--index .hero__title-colour {
-    text-align: right;
-    padding-left: 0;
-    font-size: 27px
+  .hero__title-logo {
+    width: 50px;
+    left: 97px;
+    top: -18px
   }
   .hero__bottom {
-    margin-top: 42px
+    margin-top: 16px
   }
   .hero__bottom-text {
-    line-height: 175%
+    font-size: 14px;
+    line-height: 158%
   }
   .hero__bottom-content {
+    margin-top: 22px;
     height: 56px
   }
   .hero__bottom-img {
+    max-width: 340px;
     top: -15px;
-    left: 56%
+    left: 58%
+  }
+  .hero__cite {
+    margin-top: 138px;
+    font-size: 14px;
+    line-height: 160%
   }
 }
 .header {
@@ -1838,7 +1881,7 @@ button.link:hover {
   background-position: center
 }
 .header__menu {
-  margin-bottom: 35px
+  margin-bottom: 40px
 }
 .header__natalya {
   width: 414px;
@@ -1893,6 +1936,9 @@ button.link:hover {
   .header {
     margin-bottom: 70px
   }
+  .header--index {
+    margin-bottom: 42px
+  }
   .header--study {
     margin-bottom: 30px
   }
@@ -1916,9 +1962,6 @@ button.link:hover {
   }
 }
 @media screen and (max-width:991px) {
-  .header--index {
-    margin-bottom: 147px
-  }
   .header--patients .header__inner {
     min-height: 700px
   }
@@ -1935,7 +1978,7 @@ button.link:hover {
     min-height: 600px
   }
   .header__inner {
-    padding: 14px 8px
+    padding: 12px
   }
   .header__menu {
     margin-bottom: 45px
@@ -2268,7 +2311,7 @@ main .section:last-child {
 }
 @media screen and (max-width:1365px) {
   .chapter__lead {
-    padding: 22px 36px;
+    padding: 26px 36px;
     font-size: 26px
   }
   .chapter__img img {
@@ -2285,7 +2328,8 @@ main .section:last-child {
 }
 @media screen and (max-width:991px) {
   .chapter__lead {
-    font-size: 22px
+    font-size: 22px;
+    text-align: center
   }
   .chapter__grid {
     grid-template-columns: 1fr
@@ -2299,31 +2343,43 @@ main .section:last-child {
   }
 }
 @media screen and (max-width:767px) {
+  .chapter__top {
+    margin-bottom: 22px
+  }
   .chapter__lead {
     font-size: 20px
   }
   .chapter__link {
-    height: 234px;
+    height: 212px;
+    min-height: auto;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
   }
   .chapter__text {
     width: 100%;
-    min-height: 50%;
+    height: 70px;
+    padding-top: 6px;
+    font-size: 20px;
     position: static
   }
   .chapter__img {
-    min-height: 50%;
+    height: calc(100% - 70px);
     width: auto;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
-    position: relative
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
   }
   .chapter__img img {
     width: auto;
-    max-width: 300px;
+    max-width: 220px;
     height: auto;
     position: absolute;
     bottom: 0
@@ -3468,7 +3524,7 @@ input:checked ~ .form__agree-checkbox::after {
   -ms-flex-align: center;
   align-items: center;
   color: var(--accent);
-  font-size: 16px;
+  font-size: 15px;
   transition: background var(--transition-duration) ease,color var(--transition-duration) ease,border var(--transition-duration) ease
 }
 .socials__btn:focus,
@@ -3480,6 +3536,14 @@ input:checked ~ .form__agree-checkbox::after {
 .socials__btn .icon-vk {
   font-size: 14px
 }
+@media screen and (max-width:767px) {
+  .socials__btn {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    font-size: 20px
+  }
+}
 .data {
   font-size: 14px
 }
@@ -3490,18 +3554,24 @@ input:checked ~ .form__agree-checkbox::after {
   margin-bottom: 0
 }
 .data__title {
+  margin-bottom: 6px;
   font-size: 12px;
   color: var(--gray)
 }
 .data__info {
   font-weight: 500
 }
+@media screen and (max-width:767px) {
+  .data__item {
+    margin-bottom: 17px
+  }
+}
 .footer__inner {
   padding: 20px 0 0
 }
 .footer__top {
   padding: 20px 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   display: grid;
   grid-template-columns: 1fr 3fr 2fr;
   grid-gap: 150px
@@ -3564,7 +3634,7 @@ input:checked ~ .form__agree-checkbox::after {
   margin-bottom: 12px
 }
 .footer__right > :not(:last-child) {
-  margin-bottom: 20px
+  margin-bottom: 22px
 }
 .footer__info-title {
   margin-bottom: 4px;
@@ -3665,19 +3735,44 @@ input:checked ~ .form__agree-checkbox::after {
     --footerMargin: 20px
   }
   .footer__top {
+    margin-bottom: 66px;
     display: block
   }
-  .footer__top > :not(:last-child) {
+  .footer__top > :not(:last-child):not(.footer__left) {
     margin-bottom: var(--footerMargin)
   }
+  .footer__left {
+    margin-bottom: 36px
+  }
   .footer__nav {
-    margin: 0;
-    margin-bottom: var(--footerMargin)
+    display: none
   }
   .footer__medium {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column
+  }
+  .footer__contacts {
+    padding: 20px;
+    border-radius: var(--radius);
+    background: var(--sectionBg)
+  }
+  .footer__logo img {
+    width: 156px
+  }
+  .footer__docs {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .footer__docs li:not(:last-child) {
+    margin: 0;
+    margin-bottom: 4px
+  }
+}
+@media screen and (max-width:560px) {
+  .footer__contacts-feedback {
+    margin-bottom: 30px
   }
 }
 .table__item {
