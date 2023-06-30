@@ -12,12 +12,13 @@
       background: rgba(lightgray, 50%)
       border-radius: var(--radius)
       position: relative
-      .header--index &
-         min-height: 662px
+      &--fon
          background-image: url('../images/header/index-fon.png')
          background-repeat: no-repeat
          background-size: cover
          background-position: center
+      .header--index &
+         min-height: 662px
       .header--patients &
          background: linear-gradient(#A7C3E7, #CAE0FE, #D4E7FF, #B8D7FF)
          @extend %section-lines
@@ -44,10 +45,7 @@
       z-index: 1
       bottom: 36px
       left: 36px
-      opacity: 0
       transition: transform .2s ease
-      &.animated
-         opacity: 1
    &__eye
       width: 585px
       position: absolute

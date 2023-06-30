@@ -1043,10 +1043,12 @@ template {
   right: auto
 }
 .about__inner,
+.feedback__grid,
 .header--patients .header__inner {
   position: relative
 }
 .about__inner::after,
+.feedback__grid::after,
 .header--patients .header__inner::after {
   content: "";
   position: absolute;
@@ -1328,8 +1330,8 @@ button.link:hover {
   position: absolute;
   left: 0;
   top: 5px;
-  width: 14px;
-  height: 5px;
+  width: 16px;
+  height: 6px;
   background: url(../images/elements/dots.svg) no-repeat center/contain
 }
 .img-cover {
@@ -1674,10 +1676,10 @@ button.link:hover {
   transform: rotate(0) translateX(0) translateY(0)
 }
 .hero__description {
-  margin-top: 34px;
+  margin-top: 24px;
   max-width: 724px;
   font-size: 18px;
-  line-height: 144%
+  line-height: 152%
 }
 .header--patients .hero__top {
   max-width: 800px
@@ -1884,12 +1886,14 @@ button.link:hover {
   border-radius: var(--radius);
   position: relative
 }
-.header--index .header__inner {
-  min-height: 662px;
+.header__inner--fon {
   background-image: url(../images/header/index-fon.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center
+}
+.header--index .header__inner {
+  min-height: 662px
 }
 .header--patients .header__inner {
   background: linear-gradient(#a7c3e7,#cae0fe,#d4e7ff,#b8d7ff)
@@ -1928,13 +1932,9 @@ button.link:hover {
   z-index: 1;
   bottom: 36px;
   left: 36px;
-  opacity: 0;
   transition: -webkit-transform .2s ease;
   transition: transform .2s ease;
   transition: transform .2s ease,-webkit-transform .2s ease
-}
-.header__logo.animated {
-  opacity: 1
 }
 .header__eye {
   width: 585px;
@@ -2236,7 +2236,7 @@ main .section:last-child {
   }
 }
 .advice__item {
-  padding: 18px 24px;
+  padding: 24px;
   border-radius: 28px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2246,14 +2246,21 @@ main .section:last-child {
   flex-direction: column;
   line-height: 150%
 }
-.advice__item p {
-  margin: auto;
-  position: relative
-}
 .advice__item--secondary {
   background: var(--sectionBg);
   font-size: 18px;
   font-weight: 500
+}
+.advice__item--secondary p {
+  margin: auto;
+  position: relative
+}
+.advice__item-dots {
+  max-width: 580px;
+  line-height: 122%;
+  position: relative;
+  left: 14px;
+  top: 5px
 }
 .advice__item .icon-check {
   width: 24px;
@@ -2642,11 +2649,16 @@ main .section:last-child {
   overflow: hidden
 }
 .feedback__title {
-  padding-right: 30px
+  padding-right: 30px;
+  line-height: 123%
 }
 .feedback__info {
   padding: 20px;
   color: #fff
+}
+.feedback__form {
+  position: relative;
+  z-index: 1
 }
 @media screen and (max-width:991px) {
   .feedback__title {

@@ -3,7 +3,7 @@ block head
    title Обучение
 block header
    header.header.header--study
-      .header__inner
+      .header__inner.header__inner--fon
          .header__menu.menu
             a.btn-circle.menu__burger(href="#menu" aria-label="открыть меню" data-fancybox)
                i.icon.icon-burger
@@ -38,7 +38,7 @@ block page
                .advice__inner
                   ul.advice__grid.grid
                      li.advice__item
-                        p.text-dots Если вы хотите, чтобы вы или ваши сотрудники повысили свой уровень знаний и расширили перечень оказываемых услуг в вашей оптике или клинике, научились решать проблемы пациентов, связанные с бинокулярными нарушениями,
+                        p.advice__item-dots.text-dots Если вы хотите, чтобы вы или ваши сотрудники повысили свой уровень знаний и расширили перечень оказываемых услуг в вашей оптике или клинике, научились решать проблемы пациентов, связанные с бинокулярными нарушениями,
                      li.advice__item.advice__item--secondary
                         p Рекомендуем вам приобрести “Настольную книгу оптометриста”, прослушать вебинары и посетить очные семинары магистра оптометрии и педагогики Натальи Ринской. #[i.icon-check]
 
@@ -143,6 +143,75 @@ block page
                            .parts__bottom
                               a.btn.btn--light.btn--wide(href="#") Перейти на форум
 
-                              
-                              
-                              
+block footer
+   footer.footer
+      .footer__inner
+         .footer__top
+            .footer__left
+               a.footer__logo(href="#" aria-label="На главную страницу" title="На главную страницу")
+                  img(src="images/elements/logo-footer.png", alt="логотип" width="178" height="55")
+            .footer__medium
+               nav.footer__nav
+                  ul.footer__nav-list
+                     li
+                        a(href="#description" data-fancybox) О нас
+                     li
+                        a(href="#info" data-fancybox) Пациентам
+                     li
+                        a(href="#medication" data-fancybox) Профессионалам
+                     li
+                        a(href="#table" data-fancybox) Библиотека знаний
+                     li
+                        a(href="#price" data-fancybox) Форум
+               .footer__contacts
+                  .footer__contacts-feedback
+                     a.footer__contacts-tel.tel(href="tel:+79670483343") +7 (967) 048 33 43
+                     a.email(href="mailto:info@rinoptica.ru") info@rinoptica.ru
+                  .footer__contacts-socials.socials
+                     ul.socials__list
+                        li.socials__item
+                           a.socials__btn(href="#" aria-label="телеграм")
+                              i.icon.icon-telegram
+                        li.socials__item
+                           a.socials__btn(href="#" aria-label="инстаграм")
+                              i.icon.icon-insta
+                        li.socials__item
+                           a.socials__btn(href="#" aria-label="вконтакте")
+                              i.icon.icon-vk
+            .footer__right
+               .footer__info
+                  p.footer__info-title ИП Наталья Вадимовна Ринская
+               .footer__data.data
+                  ul.data__list
+                     li.data__item
+                        p.data__title Медицинская лицензия:
+                        .data__info
+                           p № Л041-01137-77/00338526
+                           p от 16 января 2020 года
+                     li.data__item
+                        p.data__title ИНН:
+                        .data__info 
+                           p 123312915054
+                     li.data__item
+                        p.data__title Р/с:
+                        .data__info 
+                           p 23001050000****
+                     li.data__item
+                        p.data__title БИК:
+                        .data__info
+                           p 044525593
+                     li.data__item
+                        p.data__title Город:
+                        .data__info
+                           p Москва
+                     li.data__item
+                        p.data__title Корр. счет:
+                        .data__info 
+                           p 1230845250000999
+         .footer__bottom
+            p.footer__copy © Центр коррекции зрения Натальи Ринской 
+            ul.footer__docs
+               li
+                  a(href="#") Политика конфиденциальности
+               li
+                  a(href="#") Договор оферты
