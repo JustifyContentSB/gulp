@@ -1056,7 +1056,7 @@ template {
   left: 0;
   right: 0;
   height: 308px;
-  background: url(../images/elements/lines-01.svg) no-repeat center/contain
+  background: url(../images/elements/lines-01.svg) no-repeat center/cover
 }
 @media screen and (max-width:767px) {
   :root {
@@ -1178,12 +1178,7 @@ picture {
     padding: 16px
   }
   .container {
-    padding: 0 26px
-  }
-}
-@media screen and (max-width:560px) {
-  .container {
-    padding: 0 16px
+    padding: 0
   }
 }
 .btn {
@@ -1397,6 +1392,9 @@ button.link:hover {
   .title--small {
     font-size: 22px
   }
+  .title--big {
+    font-size: 34px
+  }
 }
 @media screen and (max-width:767px) {
   .link {
@@ -1416,6 +1414,9 @@ button.link:hover {
   .title--small {
     font-size: 20px
   }
+  .title--big {
+    font-size: 30px
+  }
   .list__item {
     font-size: 14px;
     line-height: 140%
@@ -1431,6 +1432,32 @@ button.link:hover {
   .email,
   .tel {
     font-size: 16px
+  }
+  .text-dots {
+    padding-left: 29px;
+    font-size: 14px;
+    line-height: 120%
+  }
+  .btn-info {
+    padding: 13px
+  }
+  .btn-circle {
+    width: 40px;
+    min-width: 40px;
+    height: 40px
+  }
+  .title--big {
+    font-size: 28px
+  }
+  .list__item {
+    padding-left: 22px;
+    line-height: 150%
+  }
+  .list__item p {
+    margin-bottom: 6px
+  }
+  .list__item::before {
+    font-size: 11px
   }
 }
 .swiper-button-next,
@@ -1618,6 +1645,9 @@ button.link:hover {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
+.hero__title--patients img {
+  display: none
+}
 .hero__top > :last-child {
   margin-bottom: 0
 }
@@ -1774,6 +1804,12 @@ button.link:hover {
     left: 200px;
     top: -20px
   }
+  .hero__title--patients .hero__title-logo {
+    width: 80px;
+    display: block;
+    left: 370px;
+    top: -10px
+  }
   .hero__bottom {
     margin-top: 30px;
     -webkit-flex-direction: column;
@@ -1818,6 +1854,11 @@ button.link:hover {
     width: 80px;
     left: 180px
   }
+  .hero__title--patients .hero__title-logo {
+    width: 56px;
+    left: 296px;
+    top: 0
+  }
   .hero__cite {
     font-size: 16px
   }
@@ -1844,6 +1885,16 @@ button.link:hover {
     width: 50px;
     left: 97px;
     top: -18px
+  }
+  .hero__title--patients .hero__title-logo {
+    left: 220px;
+    top: -10px
+  }
+  .header--patients .hero__title {
+    font-size: 34px
+  }
+  .hero__lead {
+    font-size: 14px
   }
   .hero__bottom {
     margin-top: 16px
@@ -1953,7 +2004,7 @@ button.link:hover {
 }
 @media screen and (max-width:1280px) {
   .header {
-    margin-bottom: 70px
+    margin-bottom: 62px
   }
   .header--index {
     margin-bottom: 42px
@@ -1984,6 +2035,9 @@ button.link:hover {
   .header--patients .header__inner {
     min-height: 700px
   }
+  .header--patients .header__logo {
+    display: none
+  }
   .header__eye {
     width: 360px;
     opacity: 1
@@ -1994,7 +2048,7 @@ button.link:hover {
     padding-bottom: 460px
   }
   .header--patients .header__inner {
-    min-height: 600px
+    min-height: 560px
   }
   .header__inner {
     padding: 12px
@@ -2186,7 +2240,7 @@ main .section:last-child {
     margin-bottom: 30px
   }
   .section--large {
-    margin-bottom: 50px
+    margin-bottom: 60px
   }
   .section--big {
     padding-top: 50px;
@@ -2194,7 +2248,7 @@ main .section:last-child {
     margin-right: -16px
   }
   .section__title {
-    font-size: 24px
+    font-size: 28px
   }
 }
 @-webkit-keyframes handMove {
@@ -2924,7 +2978,10 @@ input:checked ~ .form__agree-checkbox::after {
   display: flex;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
 }
 .services__img {
   max-width: 226px;
@@ -2961,60 +3018,102 @@ input:checked ~ .form__agree-checkbox::after {
   margin-left: auto;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
-  flex-shrink: 0
+  flex-shrink: 0;
+  font-size: 16px
 }
 @media screen and (max-width:1365px) {
   .services__title {
     font-size: 22px
   }
   .services__img {
-    max-width: 200px;
-    max-height: 300px
+    max-width: 180px;
+    max-height: 270px
+  }
+  .services__img--1 {
+    max-width: 157px;
+    max-height: 270px
   }
 }
 @media screen and (max-width:1280px) {
-  .services__img {
-    max-width: 180px;
-    max-height: 270px
+  .services__description {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+  .services__description-text {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 24px
+  }
+  .services__description-btn {
+    margin-left: 0
   }
 }
 @media screen and (max-width:1170px) {
   .services__grid {
     grid-template-columns: repeat(2,1fr)
   }
-  .services__img {
-    max-width: 226px;
-    max-height: 350px
-  }
 }
 @media screen and (max-width:991px) {
   .services__img {
-    max-width: 180px;
-    max-height: 270px
+    max-width: 150px;
+    max-height: 240px
+  }
+  .services__img--1 {
+    max-width: 154px;
+    max-height: 240px
   }
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width:767px) {
   .services__grid {
+    margin-bottom: 40px;
     grid-template-columns: 1fr
   }
   .services__img {
-    max-width: 226px;
-    max-height: 350px
+    max-width: 170px;
+    max-height: 260px
+  }
+  .services__img--1 {
+    max-width: 158px;
+    max-height: 282px
   }
   .services__title {
     font-size: 20px
   }
+  .services__description-text {
+    font-size: 20px
+  }
 }
 @media screen and (max-width:560px) {
+  .services__grid {
+    margin-bottom: 28px;
+    grid-gap: 14px
+  }
   .services__item {
-    min-height: 320px
+    min-height: 260px;
+    padding: 20px 5px 4px
+  }
+  .services__top {
+    max-width: 218px
   }
   .services__img {
-    max-width: 180px;
-    max-height: 250px
+    max-width: 170px;
+    max-height: 270px;
+    right: -6px
   }
-  .services__title {
-    font-size: 18px
+  .services__img--1 {
+    max-width: 153px;
+    max-height: 279px
+  }
+  .services__description-btn {
+    width: 100%;
+    min-width: auto
   }
 }
 .section--services .section__header {
@@ -3028,13 +3127,23 @@ input:checked ~ .form__agree-checkbox::after {
 }
 @media screen and (max-width:991px) {
   .section--services .section__header {
-    margin-bottom: 30px
+    margin-bottom: 22px
   }
 }
 .optics__item {
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--sectionBg)
+  background: var(--sectionBg);
+  position: relative
+}
+.optics__item--info::after {
+  content: "";
+  position: absolute;
+  right: 27px;
+  top: 27px;
+  width: 36px;
+  height: 8px;
+  background: url(../images/elements/dots-02.svg) no-repeat center/contain
 }
 .optics__title {
   margin-bottom: 38px
@@ -3053,15 +3162,6 @@ input:checked ~ .form__agree-checkbox::after {
   position: relative;
   z-index: 1
 }
-.optics__info::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  top: 25px;
-  width: 36px;
-  height: 8px;
-  background: url(../images/elements/dots-02.svg) no-repeat center/contain
-}
 .optics__info p {
   margin-bottom: 20px;
   font-size: 18px;
@@ -3079,9 +3179,37 @@ input:checked ~ .form__agree-checkbox::after {
   padding-bottom: 71.5%;
   height: 100%
 }
+@media screen and (max-width:767px) {
+  .optics__info p {
+    font-size: 16px
+  }
+}
 @media screen and (max-width:560px) {
+  .optics__title {
+    margin-bottom: 32px
+  }
+  .optics__info {
+    padding: 24px 20px 28px
+  }
+  .optics__info-text {
+    margin-bottom: 40px
+  }
+  .optics__info-text > :last-child {
+    margin-bottom: 0
+  }
+  .optics__info p {
+    margin-bottom: 24px;
+    padding-right: 20px;
+    font-size: 14px
+  }
   .optics__btn {
     width: 100%
+  }
+}
+@media screen and (max-width:560px) {
+  .section--optics {
+    margin-left: -16px;
+    margin-right: -16px
   }
 }
 .founder__main {
@@ -3137,7 +3265,8 @@ input:checked ~ .form__agree-checkbox::after {
 }
 @media screen and (max-width:767px) {
   .founder__main {
-    padding: 24px
+    padding: 30px 20px;
+    border-radius: 19px
   }
   .founder__top {
     margin-bottom: 30px
@@ -3147,6 +3276,18 @@ input:checked ~ .form__agree-checkbox::after {
   }
   .founder__description {
     font-size: 14px
+  }
+}
+@media screen and (max-width:560px) {
+  .founder__top {
+    margin-bottom: 34px
+  }
+  .founder__lead {
+    padding-left: 22px;
+    margin-bottom: 8px
+  }
+  .founder__name {
+    font-size: 24px
   }
 }
 .team__grid {
@@ -3381,8 +3522,7 @@ input:checked ~ .form__agree-checkbox::after {
   background: var(--sectionBg)
 }
 .section--faq .section__header {
-  margin-bottom: 0;
-  padding: 0 20px
+  margin-bottom: 0
 }
 .section--faq .section__title {
   max-width: 100%;
@@ -3450,7 +3590,9 @@ input:checked ~ .form__agree-checkbox::after {
   opacity: 1
 }
 .about__info {
-  max-width: 420px
+  max-width: 420px;
+  position: relative;
+  z-index: 1
 }
 .about__info > :not(:last-child) {
   margin-bottom: 28px
@@ -3524,23 +3666,56 @@ input:checked ~ .form__agree-checkbox::after {
   }
 }
 @media screen and (max-width:991px) {
-  .about__img-01 {
-    display: none
-  }
   .about__img-03 {
     display: none
   }
   .about__content {
-    padding: 0
+    padding-bottom: 100px
   }
   .about__info {
     max-width: 100%
   }
-  .about__info > :not(:last-child) {
-    margin-bottom: 18px
+  .about__text {
+    padding-right: 4px;
+    font-size: 16px;
+    line-height: 152%
   }
+  .about__text > :not(:last-child) {
+    margin-bottom: 27px
+  }
+}
+@media screen and (max-width:767px) {
+  .about__content {
+    padding-left: 0;
+    padding-bottom: 360px
+  }
+  .about__img-01 {
+    width: 195px;
+    left: 50%;
+    bottom: -64px;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0)
+  }
+  .about__img-01.animated {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0)
+  }
+}
+@media screen and (max-width:560px) {
   .about__inner {
-    padding: 36px
+    padding: 0
+  }
+  .about__content {
+    padding: 24px 20px;
+    padding-bottom: 360px
+  }
+  .about__text {
+    font-size: 14px
+  }
+  .about__description {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 158%
   }
 }
 .section--about {

@@ -43,10 +43,20 @@
 
    @media screen and (max-width: $width_xs)
       &__main
-         padding: 24px
+         padding: 30px 20px
+         border-radius: 19px
       &__top
          margin-bottom: 30px
       &__name
          font-size: 28px
       &__description
          font-size: 14px
+
+   @media screen and (max-width: $width_mob)
+      &__top
+         margin-bottom: 34px
+      &__lead
+         padding-left: 22px
+         margin-bottom: 8px
+      &__name
+         font-size: 24px
