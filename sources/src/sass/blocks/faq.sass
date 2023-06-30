@@ -1,7 +1,7 @@
 .faq
    --faqItemPadding: 24px
    &__inner
-      padding: 50px 20px
+      padding: 50px 20px 70px
    &__item
       margin-bottom: 16px
       border-radius: 16px
@@ -34,6 +34,7 @@
             transform: rotate(45deg) translateY(-50%) translateX(-10px)
    &__answer
       padding: var(--faqItemPadding)
+      padding-top: 0
       display: none
       line-height: 150%
 
@@ -45,8 +46,6 @@
          font-size: 14px
       &__btn
          font-size: 16px
-      &__answer
-         padding-top: 0
 
    @media screen and (max-width: $width_mob)
       --faqItemPadding: 16px

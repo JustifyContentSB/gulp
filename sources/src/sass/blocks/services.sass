@@ -1,5 +1,6 @@
 .services
    &__grid
+      margin-bottom: 56px
       grid-template-columns: repeat(3, 1fr)
    &__item
       min-height: 340px
@@ -34,6 +35,20 @@
       transform: translateX(50px)
       &.animated
          transform: translateX(0)
+   &__description
+      padding: 13px 0 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &-text
+         font-size: 28px
+         font-weight: 500
+         margin-right: 20px
+      &-btn
+         min-width: 275px
+         padding: 20px 27px
+         margin-left: auto
+         flex-shrink: 0
 
    @media screen and (max-width: $width_xl)
       &__title
@@ -87,6 +102,7 @@
                margin-bottom: 20px
             .text-dots
                max-width: 572px
+
    @media screen and (max-width: $width_md)
       &--services
          .section

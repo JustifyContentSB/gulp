@@ -5,15 +5,19 @@
       color: #fff
       border-radius: var(--radius)
       overflow: hidden
+      @extend %section-lines
+      &::after
+         background-image: url('../images/elements/lines-02.svg')
    &__content
       min-height: 624px
       padding: 84px 0 107px
       padding-left: 407px
       position: relative
    &__img
+      position: absolute
+      z-index: 5
       &-01
          width: 300px
-         position: absolute
          left: 0
          bottom: 0
          transform: translateY(100%)
@@ -21,7 +25,6 @@
             transform: translateY(0)
       &-02
          width: 202px
-         position: absolute
          right: 266px
          top: 0
          transform: translateY(-100%)
@@ -29,7 +32,6 @@
             transform: translateY(0)
       &-03
          width: 223px
-         position: absolute
          right: 0
          top: 56%
          transform: translateY(-50%)
@@ -42,13 +44,14 @@
          margin-bottom: 28px
    &__text
       padding-right: 20px
-      line-height: 135%
+      line-height: 122%
       & > *:not(:last-child)
-         margin-bottom: 10px
+         margin-bottom: 22px
    &__description
       padding: 16px 20px
       color: var(--accent)
       font-size: 16px
+      line-height: 129%
       font-weight: 500
       background: #fff
       border-radius: 17px

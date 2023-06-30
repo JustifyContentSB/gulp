@@ -7,9 +7,6 @@
             margin: 0 20px
    &--large
       margin-bottom: 100px
-      .section
-         &__header
-            margin: 0 20px
    &__header
       margin-bottom: 68px
       position: relative
@@ -38,6 +35,9 @@
       position: absolute
       right: 36px
       top: 0
+      animation-name: handMove
+      animation-duration: 1s
+      animation-iteration-count: infinite
    &--big
       padding-top: 100px
       background: var(--sectionBg)
@@ -105,3 +105,10 @@
       &__title
          font-size: 24px
       
+@keyframes handMove
+   0%
+      transform: translateX(0)
+   50%
+      transform: translateX(-10px)
+   100%
+      transform: translateX(0)

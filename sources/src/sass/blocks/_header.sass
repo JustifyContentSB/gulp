@@ -6,9 +6,6 @@
       margin-bottom: 70px
    &--patients
       color: #fff
-      .header
-         &__inner
-            background: linear-gradient(#A7C3E7, #CAE0FE, #D4E7FF, #B8D7FF)
    &__inner
       min-height: 781px
       padding: 16px
@@ -21,8 +18,13 @@
          background-repeat: no-repeat
          background-size: cover
          background-position: center
+      .header--patients &
+         background: linear-gradient(#A7C3E7, #CAE0FE, #D4E7FF, #B8D7FF)
+         @extend %section-lines
    &__menu
       margin-bottom: 40px
+      .header--patients &
+         margin-bottom: 22px
    &__natalya
       width: 414px
       position: absolute
@@ -39,6 +41,7 @@
    &__logo
       width: 154px
       position: absolute
+      z-index: 1
       bottom: 36px
       left: 36px
       opacity: 0
@@ -48,6 +51,7 @@
    &__eye
       width: 585px
       position: absolute
+      z-index: 1
       right: 77px
       bottom: 25px
       opacity: 0

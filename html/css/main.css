@@ -1042,6 +1042,20 @@ template {
   left: 0;
   right: auto
 }
+.about__inner,
+.header--patients .header__inner {
+  position: relative
+}
+.about__inner::after,
+.header--patients .header__inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 308px;
+  background: url(../images/elements/lines-01.svg) no-repeat center/contain
+}
 @media screen and (max-width:767px) {
   :root {
     --radius: 28px
@@ -1863,9 +1877,6 @@ button.link:hover {
 .header--patients {
   color: #fff
 }
-.header--patients .header__inner {
-  background: linear-gradient(#a7c3e7,#cae0fe,#d4e7ff,#b8d7ff)
-}
 .header__inner {
   min-height: 781px;
   padding: 16px;
@@ -1880,8 +1891,14 @@ button.link:hover {
   background-size: cover;
   background-position: center
 }
+.header--patients .header__inner {
+  background: linear-gradient(#a7c3e7,#cae0fe,#d4e7ff,#b8d7ff)
+}
 .header__menu {
   margin-bottom: 40px
+}
+.header--patients .header__menu {
+  margin-bottom: 22px
 }
 .header__natalya {
   width: 414px;
@@ -1908,6 +1925,7 @@ button.link:hover {
 .header__logo {
   width: 154px;
   position: absolute;
+  z-index: 1;
   bottom: 36px;
   left: 36px;
   opacity: 0;
@@ -1921,6 +1939,7 @@ button.link:hover {
 .header__eye {
   width: 585px;
   position: absolute;
+  z-index: 1;
   right: 77px;
   bottom: 25px;
   opacity: 0;
@@ -2036,9 +2055,6 @@ button.link:hover {
 .section--large {
   margin-bottom: 100px
 }
-.section--large .section__header {
-  margin: 0 20px
-}
 .section__header {
   margin-bottom: 68px;
   position: relative
@@ -2082,7 +2098,13 @@ button.link:hover {
 .section__hand {
   position: absolute;
   right: 36px;
-  top: 0
+  top: 0;
+  -webkit-animation-name: handMove;
+  animation-name: handMove;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
 }
 .section--big {
   padding-top: 100px;
@@ -2173,6 +2195,34 @@ main .section:last-child {
   }
   .section__title {
     font-size: 24px
+  }
+}
+@-webkit-keyframes handMove {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  50% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px)
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+@keyframes handMove {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  50% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px)
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
   }
 }
 .grid {
@@ -2823,6 +2873,7 @@ input:checked ~ .form__agree-checkbox::after {
   }
 }
 .services__grid {
+  margin-bottom: 56px;
   grid-template-columns: repeat(3,1fr)
 }
 .services__item {
@@ -2874,6 +2925,31 @@ input:checked ~ .form__agree-checkbox::after {
 .services__img.animated {
   -webkit-transform: translateX(0);
   transform: translateX(0)
+}
+.services__description {
+  padding: 13px 0 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.services__description-text {
+  font-size: 28px;
+  font-weight: 500;
+  margin-right: 20px
+}
+.services__description-btn {
+  min-width: 275px;
+  padding: 20px 27px;
+  margin-left: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
 }
 @media screen and (max-width:1365px) {
   .services__title {
@@ -2949,7 +3025,7 @@ input:checked ~ .form__agree-checkbox::after {
   background: var(--sectionBg)
 }
 .optics__title {
-  margin-bottom: 32px
+  margin-bottom: 38px
 }
 .optics__info {
   width: 100%;
@@ -2969,7 +3045,7 @@ input:checked ~ .form__agree-checkbox::after {
   content: "";
   position: absolute;
   right: -30px;
-  top: 20px;
+  top: 25px;
   width: 36px;
   height: 8px;
   background: url(../images/elements/dots-02.svg) no-repeat center/contain
@@ -2981,6 +3057,7 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .optics__btn {
   min-width: 250px;
+  padding: 20px 27px;
   margin-top: auto;
   -webkit-align-self: start;
   -ms-flex-item-align: start;
@@ -3004,7 +3081,7 @@ input:checked ~ .form__agree-checkbox::after {
   margin-bottom: 44px
 }
 .founder__lead {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-size: 16px
 }
 .founder__name {
@@ -3061,6 +3138,7 @@ input:checked ~ .form__agree-checkbox::after {
   }
 }
 .team__grid {
+  margin: 0 20px;
   grid-template-columns: repeat(4,1fr);
   grid-gap: 24px
 }
@@ -3074,7 +3152,7 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .team__photo {
   min-height: 342px;
-  padding-bottom: 102%
+  padding-bottom: 110%
 }
 .team__info {
   padding-top: 20px;
@@ -3215,7 +3293,7 @@ input:checked ~ .form__agree-checkbox::after {
   --faqItemPadding: 24px
 }
 .faq__inner {
-  padding: 50px 20px
+  padding: 50px 20px 70px
 }
 .faq__item {
   margin-bottom: 16px;
@@ -3260,6 +3338,7 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .faq__answer {
   padding: var(--faqItemPadding);
+  padding-top: 0;
   display: none;
   line-height: 150%
 }
@@ -3273,9 +3352,6 @@ input:checked ~ .form__agree-checkbox::after {
   }
   .faq__btn {
     font-size: 16px
-  }
-  .faq__answer {
-    padding-top: 0
   }
 }
 @media screen and (max-width:560px) {
@@ -3315,15 +3391,21 @@ input:checked ~ .form__agree-checkbox::after {
   border-radius: var(--radius);
   overflow: hidden
 }
+.about__inner::after {
+  background-image: url(../images/elements/lines-02.svg)
+}
 .about__content {
   min-height: 624px;
   padding: 84px 0 107px;
   padding-left: 407px;
   position: relative
 }
+.about__img {
+  position: absolute;
+  z-index: 5
+}
 .about__img-01 {
   width: 300px;
-  position: absolute;
   left: 0;
   bottom: 0;
   -webkit-transform: translateY(100%);
@@ -3335,7 +3417,6 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .about__img-02 {
   width: 202px;
-  position: absolute;
   right: 266px;
   top: 0;
   -webkit-transform: translateY(-100%);
@@ -3347,7 +3428,6 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .about__img-03 {
   width: 223px;
-  position: absolute;
   right: 0;
   top: 56%;
   -webkit-transform: translateY(-50%);
@@ -3365,15 +3445,16 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .about__text {
   padding-right: 20px;
-  line-height: 135%
+  line-height: 122%
 }
 .about__text > :not(:last-child) {
-  margin-bottom: 10px
+  margin-bottom: 22px
 }
 .about__description {
   padding: 16px 20px;
   color: var(--accent);
   font-size: 16px;
+  line-height: 129%;
   font-weight: 500;
   background: #fff;
   border-radius: 17px
