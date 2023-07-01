@@ -25,9 +25,10 @@
             font-family: icomoon
             speak: none
             position: absolute
-            right: 0
+            right: -6px
             bottom: 0
             color: var(--accent)
+            font-size: 16px
       &-author
          margin-top: auto
          display: flex
@@ -56,3 +57,8 @@
       .section
          &__title
             max-width: 502px
+      @media screen and (max-width: $width_mob)
+         padding-top: 26px
+         .section
+            &__header
+               padding-right: 30px

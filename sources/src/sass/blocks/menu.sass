@@ -2,6 +2,9 @@
    display: flex
    align-items: center
    &__burger
+      width: 55px
+      min-width: 55px
+      height: 55px
       margin-right: 8px
       color: var(--primary)
    &__list
@@ -42,10 +45,12 @@
       &__nav
          display: none
          border-radius: var(--radius)
-      &__burger
-         display: inline-flex
 
    @media screen and (max-width: $width_mob)
+      &__burger
+         width: 53px
+         min-width: 53px
+         height: 53px
       &__manage
          &-btn
             font-size: 12px

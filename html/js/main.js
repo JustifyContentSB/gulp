@@ -44,20 +44,30 @@ function showDropdownBlock() {
 function reviewsSlider() {
   var swiper = new Swiper(".reviews__container", {
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: 16,
     navigation: {
       nextEl: ".reviews-button-next",
       prevEl: ".reviews-button-prev"
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 20
+      }
     }
   });
 }
 function videosSlider() {
   var swiper = new Swiper(".videos__container", {
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: 16,
     navigation: {
       nextEl: ".videos-button-next",
       prevEl: ".videos-button-prev"
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 20
+      }
     }
   });
 }

@@ -31,9 +31,22 @@
       &__grid
          grid-template-columns: repeat(2, 1fr)
 
+   @media screen and (max-width: $width_xs)
+      &__grid
+         margin: 0 16px
+
    @media screen and (max-width: $width_mob)
       &__grid
          grid-template-columns: 1fr
+         grid-gap: 36px
+      &__photo
+         min-height: 160px
+         padding-bottom: 92%
+         img
+            object-position: top center
+      &__name
+         margin-bottom: 6px
+         font-size: 16px
 
 .section
    &--team
@@ -47,4 +60,4 @@
 
    @media screen and (max-width: $width_xs)
       &--team
-         padding-top: 50px
+         padding-top: 62px

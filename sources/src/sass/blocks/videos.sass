@@ -29,7 +29,16 @@
    &__preview
       padding-bottom: 64%
       transition: transform var(--transition-duration) ease
+   
+   @media screen and (max-width: $width_mob)
+      &__preview
+         padding-bottom: 69%
 
 .section
    &--videos
       margin-bottom: 0
+      @media screen and (max-width: $width_mob)
+         padding-top: 26px
+         .section
+            &__header
+               padding-right: 20px

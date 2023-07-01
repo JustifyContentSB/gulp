@@ -1385,6 +1385,9 @@ button.link:hover {
   border-radius: var(--radius);
   background: var(--sectionBg)
 }
+.icon-external {
+  font-size: 10px
+}
 @media screen and (max-width:1170px) {
   .title {
     font-size: 24px
@@ -1438,6 +1441,9 @@ button.link:hover {
     font-size: 14px;
     line-height: 120%
   }
+  .text-dots--small {
+    padding-left: 28px
+  }
   .btn-info {
     padding: 13px
   }
@@ -1459,6 +1465,15 @@ button.link:hover {
   .list__item::before {
     font-size: 11px
   }
+  .icon-external {
+    font-size: 8px
+  }
+}
+.swiper-button-prev::after {
+  content: "\e901"
+}
+.swiper-button-next::after {
+  content: "\e900"
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -1478,7 +1493,13 @@ button.link:hover {
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  position: static;
+  position: relative;
+  -webkit-transform: none;
+  transform: none;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
   transition: background var(--transition-duration) ease,color var(--transition-duration) ease
 }
 .swiper-button-next:focus,
@@ -1488,10 +1509,23 @@ button.link:hover {
   background: var(--hover-color);
   color: #fff
 }
+.swiper-button-next:focus::after,
+.swiper-button-next:hover::after,
+.swiper-button-prev:focus::after,
+.swiper-button-prev:hover::after {
+  color: #fff
+}
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 12px;
-  font-weight: 700
+  font-family: icomoon;
+  speak: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: var(--accent)
 }
 .animation {
   transition: all .3s ease-out
@@ -1517,6 +1551,9 @@ button.link:hover {
   align-items: center
 }
 .menu__burger {
+  width: 55px;
+  min-width: 55px;
+  height: 55px;
   margin-right: 8px;
   color: var(--primary)
 }
@@ -1571,13 +1608,13 @@ button.link:hover {
     display: none;
     border-radius: var(--radius)
   }
-  .menu__burger {
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex
-  }
 }
 @media screen and (max-width:560px) {
+  .menu__burger {
+    width: 53px;
+    min-width: 53px;
+    height: 53px
+  }
   .menu__manage-btn {
     font-size: 12px
   }
@@ -2218,7 +2255,7 @@ main .section:last-child {
     flex-direction: column
   }
   .section--big .section__wrapper {
-    padding-top: 20px
+    padding-top: 40px
   }
   .section--big .section__title {
     max-width: 100%;
@@ -2243,12 +2280,29 @@ main .section:last-child {
     margin-bottom: 60px
   }
   .section--big {
-    padding-top: 50px;
+    padding-top: 60px;
     margin-left: -16px;
     margin-right: -16px
   }
+  .section--big .section__title {
+    margin-bottom: 26px
+  }
   .section__title {
     font-size: 28px
+  }
+  .section--big .section__title {
+    font-size: 24px;
+    line-height: 120%
+  }
+}
+@media screen and (max-width:560px) {
+  .section__controls {
+    display: none
+  }
+  .section__hand {
+    top: auto;
+    bottom: -6px;
+    right: -6px
   }
 }
 @-webkit-keyframes handMove {
@@ -3102,6 +3156,9 @@ input:checked ~ .form__agree-checkbox::after {
   .services__top {
     max-width: 218px
   }
+  .services__bottom {
+    padding: 0 7px 4px
+  }
   .services__img {
     max-width: 170px;
     max-height: 270px;
@@ -3187,6 +3244,12 @@ input:checked ~ .form__agree-checkbox::after {
 @media screen and (max-width:560px) {
   .optics__title {
     margin-bottom: 32px
+  }
+  .optics__item--info::after {
+    right: 13px;
+    top: 16px;
+    width: 25px;
+    height: 6px
   }
   .optics__info {
     padding: 24px 20px 28px
@@ -3277,6 +3340,9 @@ input:checked ~ .form__agree-checkbox::after {
   .founder__description {
     font-size: 14px
   }
+  .founder__photo {
+    padding-bottom: 100%
+  }
 }
 @media screen and (max-width:560px) {
   .founder__top {
@@ -3288,6 +3354,19 @@ input:checked ~ .form__agree-checkbox::after {
   }
   .founder__name {
     font-size: 24px
+  }
+  .founder__description {
+    padding: 8px 37px;
+    font-size: 12px;
+    line-height: 124%;
+    bottom: 12px;
+    left: 12px;
+    right: 12px
+  }
+}
+@media screen and (max-width:1170px) {
+  .section--founder {
+    margin-bottom: 60px
   }
 }
 .team__grid {
@@ -3333,9 +3412,27 @@ input:checked ~ .form__agree-checkbox::after {
     grid-template-columns: repeat(2,1fr)
   }
 }
+@media screen and (max-width:767px) {
+  .team__grid {
+    margin: 0 16px
+  }
+}
 @media screen and (max-width:560px) {
   .team__grid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    grid-gap: 36px
+  }
+  .team__photo {
+    min-height: 160px;
+    padding-bottom: 92%
+  }
+  .team__photo img {
+    -o-object-position: top center;
+    object-position: top center
+  }
+  .team__name {
+    margin-bottom: 6px;
+    font-size: 16px
   }
 }
 .section--team {
@@ -3350,7 +3447,7 @@ input:checked ~ .form__agree-checkbox::after {
 }
 @media screen and (max-width:767px) {
   .section--team {
-    padding-top: 50px
+    padding-top: 62px
   }
 }
 .slider {
@@ -3365,10 +3462,15 @@ input:checked ~ .form__agree-checkbox::after {
 }
 @media screen and (max-width:767px) {
   .slider {
-    padding: 0 30px
+    padding: 0 16px
   }
   .slider__item {
     width: 370px
+  }
+}
+@media screen and (max-width:560px) {
+  .slider__item {
+    width: 312px
   }
 }
 .reviews__item {
@@ -3404,9 +3506,10 @@ input:checked ~ .form__agree-checkbox::after {
   font-family: icomoon;
   speak: none;
   position: absolute;
-  right: 0;
+  right: -6px;
   bottom: 0;
-  color: var(--accent)
+  color: var(--accent);
+  font-size: 16px
 }
 .reviews__slide-author {
   margin-top: auto;
@@ -3441,6 +3544,14 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .section--reviews .section__title {
   max-width: 502px
+}
+@media screen and (max-width:560px) {
+  .section--reviews {
+    padding-top: 26px
+  }
+  .section--reviews .section__header {
+    padding-right: 30px
+  }
 }
 .faq {
   --faqItemPadding: 24px
@@ -3498,7 +3609,7 @@ input:checked ~ .form__agree-checkbox::after {
 @media screen and (max-width:1170px) {
   .faq__inner {
     padding: 20px;
-    padding-top: 0
+    padding-top: 14px
   }
   .faq__item {
     font-size: 14px
@@ -3507,15 +3618,37 @@ input:checked ~ .form__agree-checkbox::after {
     font-size: 16px
   }
 }
+@media screen and (max-width:1170px) {
+  .faq__inner {
+    padding: 20px 16px
+  }
+}
+@media screen and (max-width:767px) {
+  .faq__btn::after {
+    font-size: 14px;
+    top: 12px;
+    -webkit-transform: none;
+    transform: none
+  }
+  .faq__btn.is-active::after {
+    -webkit-transform: rotate(45deg) translateY(0) translateX(-2px);
+    transform: rotate(45deg) translateY(0) translateX(-2px);
+    font-size: 16px
+  }
+}
 @media screen and (max-width:560px) {
   .faq {
     --faqItemPadding: 16px
   }
   .faq__item {
-    font-size: 13px
+    margin-bottom: 8px;
+    font-size: 13px;
+    border-radius: 9px
   }
   .faq__btn {
-    font-size: 14px
+    padding: 13px 12px;
+    padding-right: 62px;
+    line-height: 120%
   }
 }
 .section--faq {
@@ -3760,8 +3893,21 @@ input:checked ~ .form__agree-checkbox::after {
   transition: transform var(--transition-duration) ease;
   transition: transform var(--transition-duration) ease,-webkit-transform var(--transition-duration) ease
 }
+@media screen and (max-width:560px) {
+  .videos__preview {
+    padding-bottom: 69%
+  }
+}
 .section--videos {
   margin-bottom: 0
+}
+@media screen and (max-width:560px) {
+  .section--videos {
+    padding-top: 26px
+  }
+  .section--videos .section__header {
+    padding-right: 20px
+  }
 }
 .socials__list {
   display: -webkit-flex;

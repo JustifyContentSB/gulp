@@ -83,7 +83,7 @@
             &__header
                flex-direction: column
             &__wrapper
-               padding-top: 20px
+               padding-top: 40px
             &__title
                max-width: 100%
                margin: 0
@@ -99,12 +99,26 @@
       &--large
          margin-bottom: 60px
       &--big
-         padding-top: 50px
+         padding-top: 60px
          margin-left: -16px
          margin-right: -16px
+         .section
+            &__title
+               margin-bottom: 26px
       &__title
          font-size: 28px
-      
+         .section--big &
+            font-size: 24px
+            line-height: 120%
+
+   @media screen and (max-width: $width_mob)
+      &__controls
+         display: none
+      &__hand
+         top: auto
+         bottom: -6px
+         right: -6px
+
 @keyframes handMove
    0%
       transform: translateX(0)
