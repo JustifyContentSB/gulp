@@ -9,7 +9,7 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "fancybox": "^3.0.1",
+        "@fancyapps/fancybox": "^3.5.7",
         "gsap": "^3.12.2",
         "jquery": "^3.6.0",
         "lozad": "^1.16.0",

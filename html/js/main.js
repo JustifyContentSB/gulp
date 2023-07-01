@@ -71,4 +71,11 @@ function videosSlider() {
     }
   });
 }
-Fancybox.bind("[data-fancybox]", {});
+
+// Fancybox.bind("[data-fancybox]", {
+
+// });
+
+$(document).ready(function () {
+  $('[data-fancybox]').fancybox();
+});
