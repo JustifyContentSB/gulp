@@ -64,11 +64,23 @@
 
    @media screen and (max-width: $width_xs)
       &__content
-         padding: 24px
+         padding: 40px 24px 28px
+         &::after
+            display: none
       &__title
          margin-bottom: 24px
+         font-size: 24px
       &__manage
          grid-template-columns: 1fr
+      &__info
+         margin-bottom: 60px
+
+   @media screen and (max-width: $width_mob)
+      &__content
+         padding: 40px 17px 28px
+      &__text
+         font-size: 14px
+         line-height: 157%
 
 .section
    &--author
@@ -77,3 +89,8 @@
    @media screen and (max-width: $width_lg)
       &--author
          margin-bottom: 60px
+
+   @media screen and (max-width: $width_mob)
+      &--author
+         margin-left: -16px
+         margin-right: -16px

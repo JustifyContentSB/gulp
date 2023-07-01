@@ -19,6 +19,8 @@
       z-index: 1
 
    @media screen and (max-width: $width_md)
+      &__grid
+         grid-gap: 40px
       &__title
          padding-right: 0
 
@@ -26,12 +28,19 @@
       &__info
          padding: 10px
       &__title
-         font-size: 20px
+         font-size: 24px
 
    @media screen and (max-width: $width_mob)
+      &__grid
+         padding: 24px 16px
+      &__title
+         padding: 0 4px
       &__info
          padding: 0
 
 .section
    &--feedback
       margin-bottom: 20px
+      
+      @media screen and (max-width: $width_xs)
+         margin-bottom: 40px

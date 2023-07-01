@@ -47,7 +47,7 @@ function showDropdownBlock() {
 }
 
 function reviewsSlider() {
-   var swiper = new Swiper(".reviews__container", {
+   const swiper = new Swiper(".reviews__container", {
       slidesPerView: "auto",
       spaceBetween: 16,
       navigation: {
@@ -63,7 +63,7 @@ function reviewsSlider() {
 }
 
 function videosSlider() {
-   var swiper = new Swiper(".videos__container", {
+   const swiper = new Swiper(".videos__container", {
       slidesPerView: "auto",
       spaceBetween: 16,
       navigation: {

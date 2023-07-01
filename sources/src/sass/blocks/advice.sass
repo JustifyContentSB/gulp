@@ -42,7 +42,32 @@
             &::before
                font-size: 7px
 
+   @media screen and (max-width: $width_md)
+      &__grid
+         grid-gap: 38px
+      &__item
+         padding: 0
+         &--secondary
+            padding: 20px
+            padding-right: 40px
+         &-dots
+            left: 0
+            line-height: 154%
+
    @media screen and (max-width: $width_xs)
       &__item
          &--secondary
             font-size: 16px
+
+   @media screen and (max-width: $width_mob)
+      &__item
+         &--secondary
+            padding: 24px 32px
+            padding-right: 38px
+            font-size: 14px
+            line-height: 157%
+
+.section
+   &--advice
+      @media screen and (max-width: $width_xs)
+         margin-bottom: 60px

@@ -1891,7 +1891,10 @@ button.link:hover {
 }
 @media screen and (max-width:767px) {
   .link {
-    font-size: 16px
+    padding: 12px 16px;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 12px
   }
   .btn {
     font-size: 14px
@@ -2559,6 +2562,9 @@ button.link:hover {
   }
 }
 @media screen and (max-width:991px) {
+  .header--study {
+    margin-bottom: 42px
+  }
   .header--patients .header__inner {
     min-height: 700px
   }
@@ -2890,9 +2896,38 @@ main .section:last-child {
     font-size: 7px
   }
 }
+@media screen and (max-width:991px) {
+  .advice__grid {
+    grid-gap: 38px
+  }
+  .advice__item {
+    padding: 0
+  }
+  .advice__item--secondary {
+    padding: 20px;
+    padding-right: 40px
+  }
+  .advice__item-dots {
+    left: 0;
+    line-height: 154%
+  }
+}
 @media screen and (max-width:767px) {
   .advice__item--secondary {
     font-size: 16px
+  }
+}
+@media screen and (max-width:560px) {
+  .advice__item--secondary {
+    padding: 24px 32px;
+    padding-right: 38px;
+    font-size: 14px;
+    line-height: 157%
+  }
+}
+@media screen and (max-width:767px) {
+  .section--advice {
+    margin-bottom: 60px
   }
 }
 .chapter__top {
@@ -3106,10 +3141,13 @@ main .section:last-child {
 }
 @media screen and (max-width:1170px) {
   .event__title {
-    margin-bottom: 20px
+    margin-bottom: 30px
   }
 }
 @media screen and (max-width:991px) {
+  .event__grid {
+    grid-gap: 26px
+  }
   .event__item {
     min-height: auto
   }
@@ -3118,10 +3156,29 @@ main .section:last-child {
   .event__item {
     padding: 24px
   }
+  .event__title {
+    margin-bottom: 24px;
+    font-size: 24px
+  }
+  .event__item--secondary .event__title {
+    margin-bottom: 38px
+  }
 }
 @media screen and (max-width:560px) {
+  .event__item {
+    padding: 24px 22px
+  }
   .event__item--secondary {
     padding: 14px
+  }
+  .event__desc,
+  .event__text {
+    font-size: 14px;
+    line-height: 157%
+  }
+  .event__schedule {
+    margin-bottom: 34px;
+    padding: 22px 20px
   }
 }
 .section--event {
@@ -3220,13 +3277,29 @@ main .section:last-child {
 }
 @media screen and (max-width:767px) {
   .author__content {
-    padding: 24px
+    padding: 40px 24px 28px
+  }
+  .author__content::after {
+    display: none
   }
   .author__title {
-    margin-bottom: 24px
+    margin-bottom: 24px;
+    font-size: 24px
   }
   .author__manage {
     grid-template-columns: 1fr
+  }
+  .author__info {
+    margin-bottom: 60px
+  }
+}
+@media screen and (max-width:560px) {
+  .author__content {
+    padding: 40px 17px 28px
+  }
+  .author__text {
+    font-size: 14px;
+    line-height: 157%
   }
 }
 .section--author {
@@ -3235,6 +3308,12 @@ main .section:last-child {
 @media screen and (max-width:1170px) {
   .section--author {
     margin-bottom: 60px
+  }
+}
+@media screen and (max-width:560px) {
+  .section--author {
+    margin-left: -16px;
+    margin-right: -16px
   }
 }
 .feedback__grid {
@@ -3259,6 +3338,9 @@ main .section:last-child {
   z-index: 1
 }
 @media screen and (max-width:991px) {
+  .feedback__grid {
+    grid-gap: 40px
+  }
   .feedback__title {
     padding-right: 0
   }
@@ -3268,16 +3350,27 @@ main .section:last-child {
     padding: 10px
   }
   .feedback__title {
-    font-size: 20px
+    font-size: 24px
   }
 }
 @media screen and (max-width:560px) {
+  .feedback__grid {
+    padding: 24px 16px
+  }
+  .feedback__title {
+    padding: 0 4px
+  }
   .feedback__info {
     padding: 0
   }
 }
 .section--feedback {
   margin-bottom: 20px
+}
+@media screen and (max-width:767px) {
+  .section--feedback {
+    margin-bottom: 40px
+  }
 }
 .form__inner {
   padding: 36px 36px 44px;
@@ -3394,6 +3487,24 @@ input:checked ~ .form__agree-checkbox::after {
   .form__inner {
     padding: 30px
   }
+  .form__main {
+    margin-bottom: 10px
+  }
+  .form__title {
+    font-size: 20px
+  }
+  .form__lead {
+    font-size: 14px;
+    line-height: 135%
+  }
+  .form__agree,
+  .form__field,
+  .form__textarea {
+    font-size: 12px
+  }
+  .form__textarea {
+    min-height: 100px
+  }
 }
 @media screen and (max-width:400px) {
   .form__inner {
@@ -3449,6 +3560,11 @@ input:checked ~ .form__agree-checkbox::after {
   -o-object-fit: cover;
   object-fit: cover
 }
+.parts__pic {
+  position: absolute;
+  right: 0;
+  top: 0
+}
 .parts__forum {
   margin-left: 18px;
   display: -webkit-flex;
@@ -3459,9 +3575,35 @@ input:checked ~ .form__agree-checkbox::after {
   flex-wrap: wrap
 }
 .parts__forum li {
-  margin-left: -18px
+  width: 64px;
+  height: 64px;
+  margin-left: -18px;
+  position: relative
+}
+.parts__forum li img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center
+}
+@media screen and (max-width:1365px) {
+  .parts__top {
+    padding-right: 150px
+  }
+  .parts__pic {
+    width: 180px
+  }
 }
 @media screen and (max-width:991px) {
+  .parts__top {
+    padding-right: 100px
+  }
+  .parts__pic {
+    width: 128px
+  }
   .parts__grid {
     grid-template-columns: 1fr 1fr
   }
@@ -3478,8 +3620,26 @@ input:checked ~ .form__agree-checkbox::after {
   }
 }
 @media screen and (max-width:767px) {
+  .parts__top {
+    padding-right: 40px
+  }
   .parts__desc {
     margin-bottom: 40px
+  }
+  .parts__title {
+    max-width: 220px;
+    font-size: 24px
+  }
+  .parts__item {
+    min-height: 296px;
+    padding: 22px
+  }
+  .parts__forum li {
+    width: 52px;
+    height: 52px
+  }
+  .parts .btn {
+    padding: 20px
   }
 }
 .services__grid {

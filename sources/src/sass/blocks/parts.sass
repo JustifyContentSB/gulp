@@ -35,14 +35,37 @@
       width: 100%
       height: 100%
       object-fit: cover
+   &__pic
+      position: absolute
+      right: 0
+      top: 0
    &__forum
       margin-left: 18px
       display: flex
       flex-wrap: wrap
       li
+         width: 64px
+         height: 64px
          margin-left: -18px
+         position: relative
+         img
+            position: absolute
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+
+   @media screen and (max-width: $width_xl)
+      &__top
+         padding-right: 150px
+      &__pic
+         width: 180px
 
    @media screen and (max-width: $width_md)
+      &__top
+         padding-right: 100px
+      &__pic
+         width: 128px
       &__grid
          grid-template-columns: 1fr 1fr
       &__item
@@ -55,6 +78,20 @@
          min-height: 240px
 
    @media screen and (max-width: $width_xs)
+      &__top
+         padding-right: 40px
       &__desc
          margin-bottom: 40px
+      &__title
+         max-width: 220px
+         font-size: 24px
+      &__item
+         min-height: 296px
+         padding: 22px
+      &__forum
+         li
+            width: 52px
+            height: 52px
+      .btn
+         padding: 20px
       

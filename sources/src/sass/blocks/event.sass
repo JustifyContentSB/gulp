@@ -30,20 +30,35 @@
 
    @media screen and (max-width: $width_lg)
       &__title
-         margin-bottom: 20px
+         margin-bottom: 30px
 
    @media screen and (max-width: $width_md)
+      &__grid
+         grid-gap: 26px
       &__item
          min-height: auto
 
    @media screen and (max-width: $width_xs)
       &__item
          padding: 24px
+      &__title
+         margin-bottom: 24px
+         font-size: 24px
+         .event__item--secondary &
+            margin-bottom: 38px
 
    @media screen and (max-width: $width_mob)
       &__item
+         padding: 24px 22px
          &--secondary
             padding: 14px
+      &__text,
+      &__desc
+         font-size: 14px
+         line-height: 157%
+      &__schedule
+         margin-bottom: 34px
+         padding: 22px 20px
 
 .section
    &--event
